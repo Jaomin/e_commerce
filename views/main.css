@@ -1,0 +1,297 @@
+@font-face{
+	font-family:'3dumb-webfont';
+	src: url('3dumb-webfont.eot') format('eot'),
+		 url('3dumb-webfont.woff') format('woff'),
+	 	url('3dumb-webfont.ttf') format('ttf'),
+	 	url('3dumb-webfont.svg') format('svg');
+}
+[class*="col-"] {
+	/*border : 1px blue solid;*/
+	margin-top:15px;	
+
+}
+body{ 
+	color: #585858;
+	background-color:white;	
+}	
+h1{
+	color:#585858;
+	font-family:Georgia,serif,Times;
+	font-size: 20px;
+	text-align:center;
+	font-size:30px;
+	text-transform:uppercase;
+}
+h2{
+	
+	background-color:white;
+	border-radius: 15px;
+	color:teal;
+	font-family: '3dumb-webfont';	
+	font-size: 40px;
+	padding: 10px;
+	text-align:center;
+}
+a{
+	color:#585858;
+	font-weight: bold;
+}
+img{
+	height:200px;	
+}
+
+.container{ 
+margin-top:10px;
+}
+
+/*top-header*/
+
+#panier{ 
+padding-left:250px;
+}
+
+
+
+
+
+/*header*/
+.site_title{
+font-family: '3dumb-webfont';
+font-size: 70px;
+color:#585858;
+padding-top:20px;
+}
+#title{
+border-radius: 20px;
+padding: 15px;
+background: -moz-radial-gradient(50% 50%, #ccff00, #fff);
+background: -webkit-radial-gradient(50% 50%, #ccff00, #fff);
+background: -radial-gradient(50% 50%, #ccff00, #fff);
+background: -ms-radial-gradient(50% 50%, #ccff00, #fff);
+background: radial-gradient(50% 50%, #ccff00, #fff);
+height: 170px;
+margin-top:30px;
+text-align:center;
+}
+
+/*Navigation*/
+#list ul li { color: #585858; 
+font-family:Georgia,serif,Times; 
+display:inline; float:left;
+font-size:18px;
+}
+#list ul li a { display:block; 
+width:215px; height:40px; 
+border:2px solid #F0FFF0;
+background-color:#d8ff3f;  
+border-radius:20px; 
+padding-left:10px ; 
+color:#585858; 
+}
+#list ul li a:hover {  
+border-right:5px solid #888;
+color: #585858;
+-moz-transform:rotate(-2deg); 
+-moz-box-shadow:5px 5px 10px #000000;
+-webkit-transform:rotate(-2deg); 
+-webkit-box-shadow:10px 10px 20px #000000;
+transform:rotate(-2deg); 
+box-shadow:5px 5px 5px #000000; 
+}
+	
+/*MAIN*/
+.btn {
+	border-radius: 20px;
+	color: #585858;
+	margin-top:10px;
+}
+#total_description{
+	height: 200px;
+	padding:0px;
+	
+}
+
+#descript__price{
+	background-color:#F1FCC4;
+	border-radius: 100px;
+	font-family:Georgia,serif,Times;
+	height: 150px;
+	margin-left:30px;
+	margin-top:25px;
+	padding-top: 20px;
+	text-align:center;
+
+	
+}
+
+#descript {
+font-size:16px;
+margin-top:10px;
+padding-right:50px;
+	}
+
+
+#picture{
+	margin-botton:20px;
+	padding:0px;
+}
+
+#footer{
+	background-color:#EDF7F2;
+	margin-top:20px;
+
+}
+#inscription{
+background-color:#EDF7F2;
+}
+#inscription_title{
+	background-color: #183152;
+	border-radius:20px;
+	color: #ccff00;
+	height:42px;
+	margin: auto;
+	margin-bottom:20px;
+	margin-top:20px;
+	padding-top:5px;
+	width:40%;
+
+}
+.inscription_color{
+	background-color: #EDF7F2;
+	border-radius: 20px;
+	border-top:10px solid #ccff00 ;
+	margin-top:20px;
+}
+.inscription_title{
+	background-color: #183152;
+	border-radius:20px;
+	color: #ccff00;
+	margin-left:10px;
+	padding-left:10px;
+	width:27%;
+}
+
+
+textarea{
+	width: 100%;
+	height:200px;
+}
+
+select{
+	font-size:25px;
+	margin-left: 420px;
+	margin-top:50px;
+	text-transform:uppercase;
+}
+#choix{
+	
+	height: 300px;
+}
+
+
+/*Jusqu’à 479px : smartphone en portrait
+De 480px à 959px : smartphone en paysage, tablette en portrait et petite tablette en paysage
+De 960px à 1280px : tablette en paysage, écran d’ordinateur de taille petite et moyenne
+1281px et au delà : grand écran d’ordinateur (21″ et + en plein écran )*/
+@media only screen and (max-width:1280px) {
+
+#description{
+height: 60px;
+margin-left:10px;
+}
+#descript__price{
+width:20%;
+
+}
+.text_submit{
+	visibility:hidden;
+}
+}
+
+@media only screen and (max-width:960px) {
+#table_head {
+height:0px;
+visibility: hidden;
+}
+
+#descript__price{
+	width:10%;
+}
+button{
+	width:50%;
+}
+.text_submit{
+	visibility:hidden;
+}
+
+@media only screen and (min-width:480px) {
+h2{
+	font-size: 18px;
+	margin:5px 0px 5px 0px;
+	padding:0px;
+
+}
+
+#table_head {
+height:0px;
+visibility: hidden;
+}
+#picture{
+margin-left:150px;
+}
+#descript__price{
+margin-left:150px;
+height:10%;
+width:12%;
+}
+
+#total_description{
+	height: 10px;
+	font-size: 14px;
+	height:100px;
+}
+
+.text_submit{
+	visibility:hidden;
+}
+.btn-default{
+background-color: teal;
+height:30%;
+width:30%;
+}
+}
+@media only screen and (max-width:480px) {
+h2{
+font-size: 18px;
+margin:5px 0px 5px 0px;
+padding:0px;
+}
+
+#table_head {
+height:0px;
+visibility: hidden;
+}
+#picture{
+margin-left:60px;
+}
+#descript__price{
+margin-left:30px;
+height:30%;
+width:30%;
+}
+
+#total_description{
+	height: 10px;
+	font-size: 14px;
+	height:320px;
+}
+
+.text_submit{
+	visibility:hidden;
+}
+.btn-default{
+background-color: teal;
+height:10%;
+width:10%;
+}
+}
