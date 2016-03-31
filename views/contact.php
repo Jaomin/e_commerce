@@ -7,11 +7,12 @@
 </head>
 
 <body>
-    <?php include('header.php');
-        include('nav.php');
+    <?php 
+require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/top_header.php');   
+require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/header.php'); 
+require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');
         ?>
 	<div  class="container" >
-		<div  class="row" >
 			<div class="inscription_color"  class="col-lg-12">
 				</br><h1 class="inscription_title">CONTACT</h1>
 				<div class="row">
@@ -38,7 +39,9 @@
 	           </div>
             </div>
         </div>
-    </div>
-    <?php include('footer.php'); ?>
+    
+    <?php 
+require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/footer.php');      
+     ?>
 </body>
 </html>

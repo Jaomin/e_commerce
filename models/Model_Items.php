@@ -2,7 +2,7 @@
 
 require_once($_SERVER['DOCUMENT_ROOT'].'/site/library/database.php');
 
-class Model_m_Items{
+class Model_Items{
 
 	private $db;
 
@@ -21,13 +21,11 @@ class Model_m_Items{
 
 
 	public function getItems($typeName){
-		//$req = $bdd->prepare("SELECT * FROM items WHERE typeName=:typeName");
 		$req = "SELECT * FROM items WHERE typeName=:typeName";
 		$tableau =array(
 		'typeName'=>$typeName);
 		$resultat =$this->db->recup($req, $tableau);
-		return $resultat;
-		//var_dump($resultat);		
+		return $resultat;		
 		}
 
 		

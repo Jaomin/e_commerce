@@ -1,46 +1,15 @@
 <?php
-//require_once($_SERVER['DOCUMENT_ROOT'].'/site/library/database.php');
+if ($_SERVER['REQUEST_METHOD']=='POST'){  
+ require_once($_SERVER['DOCUMENT_ROOT'].'site/controllers/Controller_Connection.php');
+ $inscribe= new Controller_Connection();
+ $check = $inscribe ->checkIdentExists();
 
-        
+ //$inscription = $inscribe->addUser();
+}
+else{ $messageError = "Vous êtes déjà inscrit, veuillez vous connecter!";
 
-$bdd = new PDO('mysql:host=localhost; dbname=site', 'root', '');
-
-if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['naissance']) 
-    &&!empty($_POST['pass']) && !empty($_POST['pass-test'])
-    && !empty($_POST['adresse']) && !empty($_POST['postal']) && !empty($_POST['ville']) 
-    && !empty($_POST['mail']) && isset($_POST['valider'])) {
-
-    if ($_POST['pass']== $_POST['pass-test']){
-
-        $surname= htmlspecialchars($_POST['nom']);
-        $name= htmlspecialchars($_POST['prenom']);
-        $birth_date= htmlspecialchars($_POST['naissance']);
-        $identifiant= htmlspecialchars($_POST['nom']);
-        $password= sha1($_POST['pass']);
-        $address= htmlspecialchars($_POST['adresse']);
-        $postalcode= htmlspecialchars($_POST['postal']);
-        $city= htmlspecialchars($_POST['ville']);
-        $email= htmlspecialchars($_POST['mail']);  
-
-        $requeteajout =$bdd->prepare("INSERT INTO users (surName, name, birth_date, identifiant, password, address, postalCode, city, email)
-        VALUES(:nom,:prenom,:naissance,:nom,:pass,:adresse,:postal,:ville,:mail);");
-        $requeteajout -> execute(
-        array (
-                "nom" => $surname,
-                "prenom" => $name,
-                "naissance"=> $birth_date,
-                "nom" => $identifiant,
-                "pass" => $password,
-                "adresse" => $address,
-                "postal" => $postalcode,
-                "ville" => $city,
-                "mail"=> $email
-                    ));
-        }
-
-    }
-
-
+}
+}
 
 ?>
 
@@ -66,7 +35,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');
                     </br><h1 id="inscription_title"> Bienvenue chez Fantasy</h1>
                     <div class="row">
                         <div id="inscription" class="col-lg-offset-3 col-lg-6">
-                            <form action="" method="post" name= "connect">
+                            <form action="<?php $inscription?>" method="post" name= "connect">
                                 <div class="form-group">
                                     <label class="inscription_title">Nom</label>
                                     <input type="text" class="form-control" name="nom" placeholder="Nom">
@@ -115,7 +84,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');
                 </div>
             </div>
         </div> 
-        <?require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');  
+<?php
+require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/footer.php');   
 ?>      
     </body>
 </html>

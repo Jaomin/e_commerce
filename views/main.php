@@ -1,5 +1,5 @@
 <?php 
-require_once( $_SERVER['DOCUMENT_ROOT'].'/site/controllers/c_items.php');
+require_once( $_SERVER['DOCUMENT_ROOT'].'/site/controllers/Controller_Items.php');
 ?>
 <!DOCTYPE html>
 
@@ -34,7 +34,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');
 <?php
 	if (isset($_GET['page'])){
 		$typeName = strVal($_GET['page']);
-		require_once( $_SERVER['DOCUMENT_ROOT'].'/site/controllers/c_items.php');
+		require_once( $_SERVER['DOCUMENT_ROOT'].'/site/controllers/Controller_Items.php');
 		$produits= new Controller_Items();
 		$mesproduits = $produits -> viewItems($typeName);
 
@@ -60,7 +60,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');
 					</div>
 		
 	<?php
-	}
+	//}
+}
 }
 ?>
 			</div>		
