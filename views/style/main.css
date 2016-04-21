@@ -12,7 +12,7 @@ h1{
 	color:white; 
 	font-family:Georgia,serif,Times;
 	font-size: 20px;
-	font-weight:bold;
+	font-weight:300;
 	text-align:center;
 	font-size:30px;
 	text-transform:uppercase;
@@ -22,7 +22,6 @@ h2{
 	color:#696969;
 	border-radius: 15px;
 	font-family:Georgia,serif,Times;
-	font-family: 
 	font-size: 40px;
 	padding: 10px;
 	text-align:center;
@@ -30,10 +29,10 @@ h2{
 h4{
 	color:#696969;
 	font-family:Georgia,serif,Times;		
-	font-size:30px;
-	font-weight:bold;
+	font-size:20px;
+	font-weight:200;
 	margin-top:20px;
-	text-align:center;
+	text-transform:uppercase;
 }
 
 img{
@@ -66,7 +65,12 @@ p{
 font-family:Georgia,serif,Times;
 	color:#2F4F4F;
 }
+.shop{
+	background-color:#F5F5F5;
+	margin-left:50px;
+	margin-top:30px;
 
+}
 .shop_price_text{
 font-family:Georgia,serif,Times;		
 font-size:20px;

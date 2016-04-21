@@ -90,6 +90,7 @@ class Controller_Items{
 	public function viewItem($id){
 		$produit = new Model_Items();
 		$monproduit = $produit ->getItem($id);
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/detail.php');
 		return $monproduit;
 	}
 

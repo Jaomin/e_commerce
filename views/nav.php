@@ -1,22 +1,20 @@
 <link rel="stylesheet" href="/fantasy/views/style/nav.css">
-		<!--<div class="row">			
-			<nav class="col-lg-12">-->
-				<nav class="list col-md-2">
+<main>		
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<aside class="list col-md-2">
 					<ul>
-						<li><a  href="/fantasy/index.php?page=accueil">ACCUEIL</a></li>
-						<li><a  href="/fantasy/views/main.php?page=beaute">BEAUTE</a></li>
-						<li><a  href="/fantasy/views/main.php?page=bricolage">BRICOLAGE</a></li>
-						<li><a  href="/fantasy/views/main.php?page=cuisine">CUISINE</a></li>
-						<li><a  href="/fantasy/views/main.php?page=entretien">ENTRETIEN</a></li>
-						<li><a  href="/fantasy/views/main.php?page=informatique">INFORMATIQUE</a></li>
-						<li><a  href="/fantasy/views/main.php?page=quotidien">QUOTIDIEN</a></li>
-						<li><a  href="/fantasy/views/main.php?page=sorties">SORTIES</a></li>
-						<li><a  href="/fantasy/views/main.php?page=sports">SPORTS</a></li>
-						<li><a  href="/fantasy/views/main.php?page=voyages">VOYAGES</a></li>						
+						<li><a  href="/fantasy/index.php?page=accueil">&nbsp&nbspACCUEIL</a></li>
+						<li><a  href="/fantasy/index.php?page=beaute">&nbsp&nbspBEAUTE</a></li>
+						<li><a  href="/fantasy/index.php?page=bricolage">&nbsp&nbspBRICOLAGE</a></li>
+						<li><a  href="/fantasy/index.php?page=cuisine">&nbsp&nbspCUISINE</a></li>
+						<li><a  href="/fantasy/index.php?page=entretien">&nbsp&nbspENTRETIEN</a></li>
+						<li><a  href="/fantasy/index.php?page=informatique">&nbsp&nbspINFORMATIQUE</a></li>
+						<li><a  href="/fantasy/index.php?page=quotidien">&nbsp&nbspQUOTIDIEN</a></li>
+						<li><a  href="/fantasy/index.php?page=sorties">&nbsp&nbspSORTIES</a></li>
+						<li><a  href="/fantasy/index.php?page=sports">&nbsp&nbspSPORTS</a></li>
+						<li><a  href="/fantasy/index.php?page=voyages">&nbsp&nbspVOYAGES</a></li>						
 					</ul>
-				</nav>
-			<!--</nav>
-		</div>				
-	</div>-->
-
-</header>  
+				</aside>
+			

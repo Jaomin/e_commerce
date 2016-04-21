@@ -20,6 +20,11 @@ if (isset($_GET['page'])){
 		$mesproduits = $produits -> viewItems($typeName);
 	}
 
+
+
+
+
+
 if (isset($_GET['inscription'])){ 
 if(($_SERVER['REQUEST_METHOD']=='POST')) {
 	$inscribe= new Controller_Connection();

@@ -10,8 +10,6 @@ class Model_Connection{
 		$this->db=DB::getInstance();
 	}
 
-	
-
 	public function getConnection($tab){
 		$req= 'SELECT * FROM users WHERE ident=:ident AND pass=:pass';
 		$tableau= array(
@@ -23,8 +21,6 @@ class Model_Connection{
 		return $resultat;	
 		
 }
-
-
 
 	public function getInscribe($tab){
 

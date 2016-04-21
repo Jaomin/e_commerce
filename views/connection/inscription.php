@@ -10,23 +10,22 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
 
 ?>      
         <link rel="stylesheet" href="/fantasy/views/style/inscription.css">
-        <div class="container">
+        
 <?php
   if (!empty($message)){ 
 ?>           
-          <div class="row">
-        <div class="col-lg-12">
+         
+        <div class="col-md-9">
                 <h4><?php echo $message; ?></h4>
         </div>
-            <div class="row">
+            
 <?php
     }
 ?>
-
-                <div class="inscription_color" class="col-lg-12">
+                   
+                    <div class="inscription_color col-md-9">
                     </br><h1 id="inscription_title"> Bienvenue chez Fantasy</h1>
-                    <div class="row">
-                        <div id="inscription" class="col-lg-offset-3 col-lg-6">
+                        <div id="inscription">
                             <form action="" method="post" name= "connect">
                                 <div class="form-group">
                                     <label class="inscription_title">Nom</label>
