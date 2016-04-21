@@ -1,0 +1,13 @@
+footer{
+	background-color:#F5F5F5;
+	margin-top:20px;
+}
+#contact{
+	color: #585858; 
+	font-family:Georgia,serif,Times;
+	font-size:20px; 
+}
+@media only screen and (max-width:1280px) {}
+@media only screen and (max-width:960px) {}
+@media only screen and (max-width:768px) {}
+@media only screen and (max-width:480px) {}

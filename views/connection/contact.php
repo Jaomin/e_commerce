@@ -8,9 +8,9 @@
 
 <body>
     <?php 
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/top_header.php');   
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/header.php'); 
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/top_header.php');   
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
         ?>
 	<div  class="container" >
 			<div class="inscription_color"  class="col-lg-12">
@@ -41,7 +41,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');
         </div>
     
     <?php 
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/footer.php');      
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/footer.php');      
      ?>
 </body>
 </html>

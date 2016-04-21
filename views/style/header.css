@@ -1,0 +1,65 @@
+@font-face{
+	font-family:'3dumb-webfont';
+	src: url('3dumb-webfont.eot') format('eot'),
+		url('3dumb-webfont.woff') format('woff'),
+	 	url('3dumb-webfont.ttf') format('ttf'),
+	 	url('3dumb-webfont.svg') format('svg');
+}
+
+.header_logo{
+	width:auto;
+	padding-top:0px;
+	margin-left:250px;
+	margin-top:50px;
+
+}
+.header_company_title{
+	color:white; 
+	font-family: '3dumb-webfont';
+	font-size: 70px;
+	font-weight:bold;
+	height:215px;
+	padding-top:30px;
+
+}
+.header_title{
+	border-radius: 20px;
+	padding: 15px;
+	background: -moz-radial-gradient(50% 50%, #ccff00, #fff);
+	background: -webkit-radial-gradient(50% 50%, #ccff00, #fff);
+	background: -radial-gradient(50% 50%, #ccff00, #fff);
+	background: -ms-radial-gradient(50% 50%, #ccff00, #fff);
+	background: radial-gradient(50% 50%, #ccff00, #fff);
+	height: 250px;
+	margin-top:30px;
+	text-align:left;
+}
+	@media only screen and (max-width:1280px) {
+		.header_logo{
+			margin-left:100px;
+		}
+		
+		}
+	@media only screen and (max-width:960px) {
+		.header_logo{
+			visibility:hidden;
+		}	
+	}
+	@media only screen and (max-width:768px) {
+		.header_logo{
+			visibility:hidden;
+		}
+	
+	}
+	@media only screen and (max-width:480px) {
+			.header_title{
+			height:180px;
+		
+		.header_logo{
+			visibility:hidden;
+		}
+		.header_company_title{
+			font-size:40px;
+		}
+		}
+		

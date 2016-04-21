@@ -1,0 +1,61 @@
+.detail_buy_user{
+background-color:#F5F5F5;
+border-radius:30px;
+margin-bottom:20px;	
+}
+.detail_picture{
+	margin-top:20px;
+}
+.detail_free{
+	padding-top:0px;
+}
+.detail_description_title{
+	margin-top:30px;
+}
+#detail_buy_price{
+	margin-top:15px;
+	font-size: 30px;	
+}
+
+#detail_buy_stock{
+	font-style: italic;
+	font-size: 12px;
+	margin-top:30px;
+}
+.detail_buy_button{
+padding-left:150px;
+}
+#detail_buy_text{
+	margin-top:15px;
+	width:100px;
+}
+#detail_buy_submit{
+	margin-top:15px;
+	height:33px;
+
+}
+.detail_description_total{
+	margin-bottom:10px;
+}
+@media only screen and (max-width:1280px) {}
+@media only screen and (max-width:960px) {
+	
+	.detail_buy_button{
+	background-color:#F5F5F5;	
+	padding-left:14px;
+	}
+}
+@media only screen and (max-width:768px) {
+	.detail_buy_button{
+	background-color:#F5F5F5;	
+	padding-left:14px;
+	}
+	
+}
+@media only screen and (max-width:480px) {
+	.detail_buy_button{
+	background-color:#F5F5F5;	
+	padding-left:14px;
+	}
+	
+}

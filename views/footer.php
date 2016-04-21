@@ -1,14 +1,15 @@
+<link rel="stylesheet" href="/fantasy/views/style/footer.css">
 <footer>
-    <div id ="footer" class="container">
+    <div class="container">
         <div class="col-lg-12">
             <div class="row">
                 <div class="col-lg-8">
-                    <p>copyright....</p></br>
-                    <a href="/site/views/administration.php">admin</a></br>
-                     <a href="/site/views/additem.php">add</a></br>
+                    <p><?php
+                    echo  date('Y') ;?> Copyright.</p></br>
+                    <a href="/fantasy/views/administration.php">admin</a></br>
                 </div>
                 <div class="col-lg-4">
-                <a href="/site/views/contact.php" ><h1>contact</h1></a>			 
+                <a href="/fantasy/views/connection/contact.php" ><h1 id="contact">contact</h1></a>			 
                 </div>
             </div>
         </div>

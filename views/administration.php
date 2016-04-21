@@ -1,27 +1,39 @@
 
-<?php        
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/top_header.php');   
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/header.php'); 
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php');  
-?>      
-        ?>
-        <div  class="container">
+<?php    
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Items.php');    
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/top_header.php');  
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');  
+?>
+
             <div class="row">
-                <div  id="choix" class= "inscription_color" class="col-lg-12">                  
-                    </br><h1>ACTION</h1>                
-                        <select  name= "choix">
-                            <option value="value 1" selected>Ajouter Article</option>
-                            <option value="value 2">Modifier Article</option>
-                            <option value="value 1">Annuler Article</option>
-                            <option value="value 1">Creer Categorie</option>
-                        </select>
-                        <button type="submit" class="btn btn-default" name="valider">VALIDER</button>
-                    </div>
-                </div>
-            </div>
-                
-      
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/footer.php');  
-?>      
-    </body>
-</html>
+                <div class="admin col-lg-12">                  
+                    </br><h1>ACTION</h1> 
+                    <form action ="" method="post" name="admin">             
+                        <select name= "choix">
+                            <option value="1">Ajouter Article</option>
+                            <option value="2">Modifier Article</option>
+                            <option value="3">Supprimer Article</option>  
+                        </select>  
+                            <button type="submit" class="btn btn-default" name="valider">VALIDER</button>   
+                      </form>
+                  </div>
+              </div>
+          </div>   
+<?php
+
+
+if(isset($_POST['valider'])&& isset($_POST['choix'])) {
+    $select = ($_POST['choix']);
+
+    if ($select == 1){ 
+        header('location:/fantasy/views/items/addItem.php');
+  }    
+   else if ($select == 2) { 
+      header('location:/fantasy/views/items/modifyItem.php');
+  }        
+    else if ($select == 3) { 
+      header('location:/fantasy/views/items/deleteItem.php');
+  }        
+}
+?>  

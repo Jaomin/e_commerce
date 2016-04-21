@@ -1,20 +1,45 @@
 
+<?php
+require_once( $_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Items.php'); 
+require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connection.php');
 
-<html>
-<head>
-	<link rel="stylesheet" href="views/bootstrap.css">
-		 <link rel="stylesheet" href="views/main.css">
-</head>
-	
-
-<?php 
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/top_header.php');	
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/header.php'); 
-require_once($_SERVER['DOCUMENT_ROOT'].'/site/views/nav.php'); 
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/top_header.php');	
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
 
 
+if (!empty($_POST['ident'])&& !empty($_POST['pass'])){  
+    $connect= new Controller_Connection();
+    $connection = $connect->checkIdentExists();
+	}
 
- require_once ($_SERVER['DOCUMENT_ROOT'].'/site/views/footer.php'); ?>
+if (isset($_GET['page'])){
+		$typeName = strVal($_GET['page']);
+		require_once( $_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Items.php');
+		$produits= new Controller_Items();
+		$mesproduits = $produits -> viewItems($typeName);
+	}
+
+if (isset($_GET['inscription'])){ 
+if(($_SERVER['REQUEST_METHOD']=='POST')) {
+	$inscribe= new Controller_Connection();
+    $inscription = $inscribe->addUser();
+	}
+}
+
+
+if (isset($_GET['id'])){
+	$id =intVal($_GET['id']);
+	require_once( $_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Items.php');
+	$produit= new Controller_Items();
+	$monproduit = $produit->viewItem($id);
+}
+
+
+
+
+
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/footer.php'); 
+ ?>
  		
-	</body>
-</html>
+	

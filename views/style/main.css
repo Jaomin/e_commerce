@@ -1,0 +1,184 @@
+
+[class*="col-"] {
+	/*border : 1px blue solid;*/
+	/*margin-top:15px;*/	
+
+}
+body{ 
+	color: #585858;
+	background-color:white;	
+}	
+h1{
+	color:white; 
+	font-family:Georgia,serif,Times;
+	font-size: 20px;
+	font-weight:bold;
+	text-align:center;
+	font-size:30px;
+	text-transform:uppercase;
+}
+h2{
+	
+	color:#696969;
+	border-radius: 15px;
+	font-family:Georgia,serif,Times;
+	font-family: 
+	font-size: 40px;
+	padding: 10px;
+	text-align:center;
+}
+h4{
+	color:#696969;
+	font-family:Georgia,serif,Times;		
+	font-size:30px;
+	font-weight:bold;
+	margin-top:20px;
+	text-align:center;
+}
+
+img{
+	background-size: contain;
+}
+a:link{
+	color:#585858;
+	font-weight: bold;
+}
+a:hover{
+	text-decoration:none;
+}
+a:visited{
+	color:#585858;
+}
+
+
+textarea{
+	width: 100%;
+	height:200px;
+}
+
+select{
+	font-size:25px;
+	margin-left: 420px;
+	margin-top:50px;
+	text-transform:uppercase;
+}
+p{
+font-family:Georgia,serif,Times;
+	color:#2F4F4F;
+}
+
+.shop_price_text{
+font-family:Georgia,serif,Times;		
+font-size:20px;
+}
+	
+.shop_pictures{
+background-size:250px 250px;
+margin-top:20px;
+text-align:center;
+transition: 2 ease-in-out;	
+
+}
+.shop_pictures-img:hover{
+transform:scale(0.95);		
+
+}
+
+
+/*Jusqu’à 479px : smartphone en portrait
+De 480px à 959px : smartphone en paysage, tablette en portrait et petite tablette en paysage
+De 960px à 1280px : tablette en paysage, écran d’ordinateur de taille petite et moyenne
+1281px et au delà : grand écran d’ordinateur (21″ et + en plein écran )*/
+@media only screen and (max-width:1280px) {
+#description{
+height: 60px;
+margin-left:10px;
+}
+#descript__price{
+width:20%;
+}
+.text_submit{
+visibility:hidden;
+}		
+}
+
+@media only screen and (max-width:960px) {
+	
+#table_head {
+height:0px;
+visibility: hidden;
+}
+
+#descript__price{
+width:10%;
+}
+button{
+width:50%;
+}
+.text_submit{
+visibility:hidden;
+}
+				
+}
+
+
+@media only screen and (max-width:768px) {
+		
+#table_head {
+height:0px;
+visibility: hidden;
+}
+.shop_price{
+height:80px;
+}
+#descript__price{
+width:10%;
+}
+button{
+width:50%;
+}
+.text_submit{
+visibility:hidden;
+}	
+}
+
+
+@media only screen and (max-width:480px) {
+		
+	
+h2{
+font-size: 18px;
+margin:5px 0px 5px 0px;
+padding:0px;
+}
+
+#table_head {
+height:0px;
+visibility: hidden;
+}
+.shop_price{
+width:80px;
+margin-left:60px;
+}
+#descript__price{
+margin-left:30px;
+height:30%;
+width:30%;
+}
+
+#total_description{
+height: 10px;
+font-size: 14px;
+height:320px;
+}
+	
+.text_submit{
+visibility:hidden;
+}
+.btn-default{
+background-color: white;
+height:10%;
+width:10%;
+}
+
+}		

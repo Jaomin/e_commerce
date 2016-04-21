@@ -1,0 +1,26 @@
+.inscription{
+	margin-top:20px;
+}
+	#inscription_title{
+		background-color: #183152;
+		border-radius:20px;
+		color: #ccff00;
+		height:42px;
+		margin: auto;
+		margin-bottom:20px;
+		margin-top:20px;
+		padding-top:5px;
+		width:60%;
+	}
+	.inscription_title{
+		background-color: #183152;
+		border-radius:20px;
+		color: #ccff00;
+		margin-left:10px;
+		padding-left:10px;
+		width:27%;
+	}
+@media only screen and (max-width:1280px) {}
+@media only screen and (max-width:960px) {}
+@media only screen and (max-width:768px) {}
+@media only screen and (max-width:480px) {}
