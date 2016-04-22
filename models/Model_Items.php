@@ -57,7 +57,7 @@ public function allItems(){
 
 
 	//function which permit administrators to add items in the webfantasy
-	public function addItem($tab){
+	/*public function addItem($tab){
 
 		
 
@@ -80,11 +80,9 @@ public function allItems(){
 	}
 
 	public function updateItem($tab, $itemName){
-		
-		echo "Model_Items before";
 		$req = "UPDATE items SET type = :type, typeName = :typeName, itemName=:itemName, description = :description, descriptionb = :descriptionb,
 		 price = :price , stock = :stock, picture = :picture WHERE itemName = :itemName";
-		var_dump($tab['type']);
+		
 		 $tableau =array(
 		 	"type" => $tab['type'],
 		 	"typeName" => $tab['typeName'],
@@ -97,7 +95,7 @@ public function allItems(){
 
 		 	);
 		 $resultat = $this->db->recup($req, $tableau);
-		echo "Model_Items after";
+		
 	}
 
 	public function deleteItem($nom){
@@ -108,7 +106,7 @@ public function allItems(){
 		);
 		$resultat = $this->db->recup($req, $tableau);
 		 return $resultat;
-	}
+	}*/
 
 	public function substract($id, $quantity){
 		$req = "UPDATE items SET stock= stock-$quantity WHERE id = $id; ";

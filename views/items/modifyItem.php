@@ -1,4 +1,5 @@
  <?php
+ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Admin.php');
  require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Items.php');
  ?>
 
@@ -13,7 +14,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
      ?>
      <link rel="stylesheet" href="/fantasy/views/style/administration.css">
         <div class="row">
-            <div class="modify col-lg-12">
+            <div class="modify col-md-9">
                 <form action ="" method="post" name="update">  
                     <select class="modify_listDer" name="choose">
      <?php
@@ -27,7 +28,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
                     <button type="submit" class="btn btn-default" name="update">MODIFIER</button>
                 </form>
             </div>
-        </div>
+       
     
      
     </body>
@@ -42,10 +43,9 @@ if(isset($_POST['choose']) && isset($_POST['update'])){
 
   ?>
    
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-offset-3 col-lg-6">
+            
+                    
+                        <div class="col-md-offset-1 col-md-7">
                             <form action="" method="post" name= "modifyItem">
                                  <div class="form-group">
                                     <input type="text" class="form-control" name="type" value="<?php echo $champs['type'];?>">
@@ -88,7 +88,7 @@ if(isset($_POST['choose']) && isset($_POST['update'])){
 }
 }
 if ($_SERVER['REQUEST_METHOD']=='POST'){
-     $mod= new Controller_Items();
+     $mod= new Controller_Admin();
      $message = $mod->modifyItem();
      
        

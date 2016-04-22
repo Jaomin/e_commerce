@@ -8,8 +8,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
  foreach($mypurchase as $cle => $item){
  ?>
 
- 	<div class="container">
-	 	<div class="row">
+ 	
 	 		<div class= "col-md-offset-2 col-md-8">
 	 			<div class= "panier_article">
 	 				<p> <?php echo $_SESSION['panier']['quantity'];?></p>
@@ -19,7 +18,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
 	 			</div>
 	 		</div>
 	 	</div>
-	 </div>
+	 
  <?php
  }
 ?>

@@ -2,12 +2,22 @@
 	color: #585858;
 	height:50px;
 	font-size:14px;
-	font-weight:bold;
+	font-weight:300;
 	text-align:center;
 
 }
+.modify_item{
+	margin-top:50px;
+}
 .modify_item_textarea{
 	height:100px;
+}
+
+select{
+	font-size:25px;
+	margin-left:250px;
+	margin-top:50px;
+	text-transform:uppercase;
 }
 
 @media only screen and (max-width:1280px) {}

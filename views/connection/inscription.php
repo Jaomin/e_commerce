@@ -26,7 +26,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
                     <div class="inscription_color col-md-9">
                     </br><h1 id="inscription_title"> Bienvenue chez Fantasy</h1>
                         <div id="inscription">
-                            <form action="" method="post" name= "connect">
+                            <form action="/fantasy/index.php" method="post" name= "connect">
                                 <div class="form-group">
                                     <label class="inscription_title">Nom</label>
                                     <input type="text" id="name" class="champs form-control" name="nom" placeholder="Nom">

@@ -3,6 +3,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/library/database.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/MODELS/Model_Items.php');
 
+
 class Controller_Items{
 
 	//return the placeholder to increase the visibility for the admin
@@ -30,7 +31,7 @@ class Controller_Items{
 	}
 	
 	
-	public function addItem(){
+	/*public function addItem(){
 		if (!empty($_POST['type']) && !empty($_POST['categorie']) && !empty($_POST['nom']) && !empty($_POST['description']) 
         && !empty($_POST['descriptionb']) &&!empty($_POST['prix']) && !empty($_POST['stock']) && !empty($_POST['picture']))
 		{  
@@ -47,7 +48,7 @@ class Controller_Items{
           
             );	
 			
-			$add = new Model_Items();
+			$add = new Model_Admin();
 			$addItem = $add ->addItem($tab);										
 		}else{
 			$message = 'veuillez remplir tous les champs';
@@ -60,7 +61,6 @@ class Controller_Items{
 
 		if (!empty($_POST['type']) && !empty($_POST['typeName']) && !empty($_POST['itemName']) && !empty($_POST['description'])
 			&& !empty($_POST['descriptionb']) && !empty($_POST['price']) && !empty($_POST['stock'])) {  
-			var_dump($_POST['itemName']);
 			$tab = array(
 	        'type'=> htmlspecialchars($_POST['type']),
 	        'typeName'=> htmlspecialchars($_POST['typeName']),
@@ -72,19 +72,19 @@ class Controller_Items{
 	        'picture'=> htmlspecialchars($_POST['picture'])
 	        );
 				
-			$item = new Model_Items();
+			$item = new Model_Admin();
 			$update = $item -> updateItem($tab, $tab['itemName']);
-			echo "Controller_Items in";
+			
 		}
-		echo "Controller_Items";
-		//require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration.php');	
+		
+	
 	}
 
 	public function deleteItems($nom){
-		$del = new Model_Items();
+		$del = new Model_Admin();
 		$delete = $del-> deleteItem($nom);
 		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration.php');
-	}
+	}*/
 
 	//permit to have a total description of the item
 	public function viewItem($id){

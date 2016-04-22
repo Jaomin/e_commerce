@@ -5,33 +5,34 @@
 	 	url('3dumb-webfont.ttf') format('ttf'),
 	 	url('3dumb-webfont.svg') format('svg');
 }
+.header{
+margin-top:0px;
+}
 
 .header_logo{
-	width:auto;
 	padding-top:0px;
-	margin-left:250px;
-	margin-top:50px;
+	
 
 }
 .header_company_title{
-	color:white; 
+	color:#f5fffa; 
 	font-family: '3dumb-webfont';
 	font-size: 70px;
-	font-weight:bold;
-	height:215px;
-	padding-top:30px;
+	font-weight:900;
+	letter-spacing:0.1em;
+	height:100px;
+	margin-top:10px;
+	
 
 }
 .header_title{
-	border-radius: 20px;
 	padding: 15px;
-	background: -moz-radial-gradient(50% 50%, #ccff00, #fff);
-	background: -webkit-radial-gradient(50% 50%, #ccff00, #fff);
-	background: -radial-gradient(50% 50%, #ccff00, #fff);
-	background: -ms-radial-gradient(50% 50%, #ccff00, #fff);
-	background: radial-gradient(50% 50%, #ccff00, #fff);
-	height: 180px;
-	margin-top:30px;
+	background: -moz-radial-gradient(50% 50%, #d8ff3f,  #f5fffa);
+	background: -webkit-radial-gradient(50% 50%, #d8ff3f,  #f5fffa);
+	background: -radial-gradient(50% 50%, #d8ff3f,  #f5fffa);
+	background: -ms-radial-gradient(50% 50%, #d8ff3f,  #f5fffa);
+	background: radial-gradient(50% 50%, #d8ff3f,  #f5fffa);
+	height: 120px;
 	text-align:left;
 }
 	@media only screen and (max-width:1280px) {
@@ -45,7 +46,7 @@
 			visibility:hidden;
 		}	
 	}
-	@media only screen and (max-width:768px) {
+	@media only screen and (max-width:568px) {
 		.header_logo{
 			visibility:hidden;
 		}
@@ -62,4 +63,4 @@
 			font-size:40px;
 		}
 		}
-		
+	

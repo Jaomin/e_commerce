@@ -1,30 +1,23 @@
 ﻿<?php 
-session_start();
 require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connection.php');
- 
-
-
 ?>
-
 
 <!DOCTYPE html>
 
 <html>
 	<head>
-		
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
 		<title>Fantasy</title>
 		<link rel="stylesheet" href="/fantasy/views/style/bootstrap.css">
 		<link rel="stylesheet" href="/fantasy/views/style/top_header.css">
 		<link rel="stylesheet" href="/fantasy/views/style/main.css">
 	</head>
 
-	<body>
+<body>
 	<header>
 		<div  class="container">
 			<div class="row">
-				<div class="top_header col-lg-12">
+				<div class="top_header col-md-12">
 					<div class="top_header-connection  col-xs-12 col-sm-8 col-md-4">
 							<form action="/fantasy/index.php" method="post">
 								<input class="top_header-button" type="text" name="ident"  placeholder = "NOM" >
@@ -62,15 +55,14 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
 				}
 			}
 				
-				?>
+?>
 				
 				<div  class="top_header-basket col-xs-6 col-sm-6 col-md-1">
-					<a class="top_header-img" href="/fantasy/views/items/panier.php"><img class="top_header-img" src="/fantasy/images/bag.png" height="50px"/></a>
+					<a class="top_header-img" href="/fantasy/views/items/panier.php"><img class="top_header-img" src="/fantasy/images/bag.png" height="45px"/></a>
 				</div>	
 			</div>
-		</div>
-	</div>
 
+	
 		
 
 

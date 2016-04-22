@@ -1,11 +1,11 @@
  <?php
- require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Items.php');       
+ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Admin.php');       
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/top_header.php');   
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');  
 
 if ($_SERVER['REQUEST_METHOD']=='POST'){
-     $add= new Controller_Items();
+     $add= new Controller_Admin();
      $message = $add->addItem();
      
        
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
  <link rel="stylesheet" href="/fantasy/views/style/administration.css">    
      <div class="container">
             <div class="row">
-                <div class="modify_item col-lg-12">
+                <div class="modify_item col-md-10">
                     <div class="row">
                         <div class="col-lg-offset-3 col-lg-6">
                             <form action="" method="post" name= "addItem">

@@ -1,13 +1,13 @@
 
 <?php    
-require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Items.php');    
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Admin.php');    
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/top_header.php');  
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');  
 ?>
+<link rel="stylesheet" href="/fantasy/views/style/administration.css">
 
-            <div class="row">
-                <div class="admin col-lg-12">                  
+                <div class="admin col-md-10">                  
                     </br><h1>ACTION</h1> 
                     <form action ="" method="post" name="admin">             
                         <select name= "choix">
@@ -18,8 +18,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
                             <button type="submit" class="btn btn-default" name="valider">VALIDER</button>   
                       </form>
                   </div>
-              </div>
-          </div>   
+                    
 <?php
 
 

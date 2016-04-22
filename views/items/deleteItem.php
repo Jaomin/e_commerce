@@ -1,4 +1,5 @@
  <?php
+ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Admin.php');
  require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Items.php');
  ?>
 
@@ -15,15 +16,15 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
      $chooseItem = $choose ->listAllItems();
      ?>
       <link rel="stylesheet" href="/fantasy/views/style/administration.css">
-     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
+     
+       
+            <div class="col-md-10">
                 <form action ="" method="post" name="update">  
-                    <select class="listDer" name="choose">
+                    <select name="choose">
      <?php
      foreach($chooseItem as $item)   {
          ?>                    
-                    <option class="listDer" value="<?php echo $item['itemName'];?>"><?php echo $item['itemName']; ?></option>      
+                    <option value="<?php echo $item['itemName'];?>"><?php echo $item['itemName']; ?></option>      
     <?php
 }       
 ?>                   
@@ -31,14 +32,13 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
                     <button type="submit" class="btn btn-default" name="delete">SUPPRIMER</button>
                 </form>
             </div>
-        </div>
-    </div>
+        
      
     </body>
 </html>
 <?php
 if(isset($_POST['choose']) && isset($_POST['delete'])){
     $nom = $_POST['choose'];
-    $product = new Controller_Items();
+    $product = new Controller_Admin();
     $delProduct = $product->deleteItems($nom);
 }

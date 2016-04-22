@@ -1,24 +1,23 @@
 .top_header{
-	background-color:#F5F5F5;
-	height:60px;
-	margin-top:0px;
+	background-color:#f5fffa;
+	height:80px;
+	padding-top:0px;
 	
 }
 .top_header-session{
-	padding-top:15px;
 }
 
 .top_header-button{
-	margin-top:15px;
 	width:120px;
 }
 
 #top_header-basket{
-	margin-top:5px;
-	transition: 0.5 ease-in-out;
+	margin-top:8px;
+	
 	}
-#top_header-img:hover{
-	transform:scale(1.2);
+#top_header-img:{
+	margin-top:8px;
+	
 }
 }
 

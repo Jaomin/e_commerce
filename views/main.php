@@ -15,7 +15,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
 										
 							<div class=" shop_pictures col-xs-12 col-sm-6 col-md-4">
 								<h4><?php echo $item['itemName'];?></h4>
-								<a href="/fantasy/index.php?id=<?php echo $item['id']; ?>" ><img class="shop_pictures-img" src="/fantasy/images/<?php echo $item['picture'];?>" alt="<?php $item['itemName'];?>" height="220x" width="250px"/>
+								<!--to reference the choiced item-->
+								<a href="/fantasy/index.php?id=<?php echo $item['id']; ?>" ><img class="shop_pictures-img" src="/fantasy/images/<?php echo $item['picture'];?>" alt="<?php $item['itemName'];?>" width="250px"/>
 								<p class="shop_price_text"><?php echo $item['price'];?> euros</p>								
 							</div>		
 		

@@ -20,19 +20,6 @@ if (isset($_GET['page'])){
 		$mesproduits = $produits -> viewItems($typeName);
 	}
 
-
-
-
-
-
-if (isset($_GET['inscription'])){ 
-if(($_SERVER['REQUEST_METHOD']=='POST')) {
-	$inscribe= new Controller_Connection();
-    $inscription = $inscribe->addUser();
-	}
-}
-
-
 if (isset($_GET['id'])){
 	$id =intVal($_GET['id']);
 	require_once( $_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Items.php');
@@ -40,6 +27,19 @@ if (isset($_GET['id'])){
 	$monproduit = $produit->viewItem($id);
 }
 
+if (isset($_GET['action'])){
+	if($_GET['action']=='buy'){
+		$purchase = new Controller_Items();
+		$myPurchase = $purchase-> createTrolley();
+	}
+}
+
+if (isset($_GET['inscription'])){ 
+if(($_SERVER['REQUEST_METHOD']=='POST')) {
+	$inscribe= new Controller_Connection();
+    $inscription = $inscribe->addUser();
+	}
+}
 
 
 
