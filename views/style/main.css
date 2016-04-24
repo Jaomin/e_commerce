@@ -1,43 +1,47 @@
 
 [class*="col-"] {
-	/*border : 1px blue solid;*/
+	/*border : 1px black solid;*/
 	/*margin-top:15px;*/	
 
 }
 body{ 
 	color: #585858;
-	background-color:#f5fffa;	
+	margin:0;
+	padding:0;
+	
 }	
 h1{
-	color:#585858; 
+	color:teal; 
 	font-family:Georgia,serif,Times;
 	font-size: 20px;
-	font-weight:300;
-	text-align:center;
-	font-size:30px;
+	font-weight:500;
+	margin-left:30px;
 	text-transform:uppercase;
 }
 h2{
-	
-	color:#696969;
-	border-radius: 15px;
+	color:#78A419;
 	font-family:Georgia,serif,Times;
-	font-size: 40px;
-	padding: 10px;
-	text-align:center;
+	font-size: 20px;	
 }
-h4{
-	color:#696969;
+
+h3{
+	color:#585858;
 	font-family:Georgia,serif,Times;		
 	font-size:20px;
 	font-weight:200;
 	margin-top:20px;
 	text-transform:uppercase;
 }
+h4{
+	color:teal; 
+	font-family:Georgia,serif,Times;
+	font-size: 15px;
+	font-weight:400;
+	margin-left:30px;
+	text-transform:uppercase;
 
-img{
-	background-size: contain;
 }
+
 a:link{
 	color:#585858;
 	font-weight: bold;
@@ -55,32 +59,32 @@ textarea{
 	height:200px;
 }
 
-
 p{
 font-family:Georgia,serif,Times;
-	color:#2F4F4F;
+color:#585858;
 }
+
 .shop{
-	
-	margin-left:50px;
-	margin-top:30px;
-
-}
-.shop_price_text{
-font-family:Georgia,serif,Times;		
-font-size:20px;
+background-attachment: fixed;
+background-image:url("/fantasy/images/mer.jpg");
+background-size:contain;
+border-radius:5px;	
 }
 	
-.shop_pictures{
-background-size:250px 250px;
-margin-top:20px;
-text-align:center;
+.shop_pictures{	
+margin-left:70px;	
 transition: 2 ease-in-out;	
-
+}
+.shop_pictures-img{
+	border-radius:10px;
 }
 .shop_pictures-img:hover{
+	border-radius:10px;
 transform:scale(0.95);		
 
+}
+.shop_price-text{
+	margin-left:52%;
 }
 
 
@@ -103,42 +107,14 @@ visibility:hidden;
 
 @media only screen and (max-width:960px) {
 	
-#table_head {
-height:0px;
-visibility: hidden;
-}
 
-#descript__price{
-width:10%;
-}
-button{
-width:50%;
-}
-.text_submit{
-visibility:hidden;
-}
 				
 }
 
 
 @media only screen and (max-width:768px) {
 		
-#table_head {
-height:0px;
-visibility: hidden;
-}
-.shop_price{
-height:80px;
-}
-#descript__price{
-width:10%;
-}
-button{
-width:50%;
-}
-.text_submit{
-visibility:hidden;
-}	
+
 }
 
 
@@ -151,33 +127,5 @@ margin:5px 0px 5px 0px;
 padding:0px;
 }
 
-#table_head {
-height:0px;
-visibility: hidden;
-}
-.shop_price{
-width:80px;
-margin-left:60px;
-}
-#descript__price{
-margin-left:30px;
-height:30%;
-width:30%;
-}
-
-#total_description{
-height: 10px;
-font-size: 14px;
-height:320px;
-}
-	
-.text_submit{
-visibility:hidden;
-}
-.btn-default{
-background-color: white;
-height:10%;
-width:10%;
-}
 
 }		

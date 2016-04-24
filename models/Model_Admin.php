@@ -12,8 +12,6 @@ class Model_Admin{
 		
 	public function addItem($tab){
 
-		
-
 		$requete = "INSERT INTO items (type, typeName, itemName, description, descriptionb,
 		price, stock, picture)
 		VALUES (:type, :categorie, :nom, :description, :descriptionb, :prix, :quantite, :picture);";
@@ -53,7 +51,6 @@ class Model_Admin{
 	}
 
 	public function deleteItem($nom){
-		var_dump($nom);
 		$req = "DELETE FROM items WHERE itemName = :nom";
 		$tableau =array(
 		'nom'=>$nom
@@ -69,7 +66,32 @@ class Model_Admin{
 		 return $resultat;
 
 	}
+	public function allTypeName(){
+		$req= ("SELECT * FROM categories ORDER BY name;");
+		$tableau=array();
+		$resultat=$this->db->recup($req,$tableau);
+		return $resultat;
+	}
 
-	
+	public function positionItem($nom){
+		$req = ("SELECT * FROM items WHERE itemName=:nom");
+		$tableau =array(
+		'nom'=>$nom);
+		$resultat =$this->db->recup($req, $tableau);
+		//var_dump($resultat);
+		return $resultat;
+		
+	}
+
+	//function made for the administrator who wants to modify an Item. It represents the list of all of them
+	public function findItem($nom){
+		$req = ("SELECT * FROM items WHERE nom=:nom;");
+		$tableau =array(
+		'nom'=>$nom
+		);
+		$resultat =$this->db->recup($req, $tableau);
+		return $resultat;
+
+	}
 	
 }

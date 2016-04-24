@@ -10,7 +10,8 @@ a:visited{
 	color:#585858;
 }
 	.list{
-		padding-top:100px;
+		height:600px;
+		padding-top:50px;
 	}
 
 	.list ul{
@@ -27,7 +28,7 @@ a:visited{
 	}
 	.list ul li a { 
 		display:block; 
-		width:180px; height:30px; 
+		width:160px; height:30px; 
 		border:2px solid #F0FFF0;
 		background-color:#d8ff3f;  
 		border-radius:12px; 
@@ -41,6 +42,10 @@ a:visited{
 		-webkit-box-shadow:5px 5px 10px #000000;
 		transform:rotate(-2deg); 
 	}
+	.infos{
+		margin-top:50px;
+	}
+
 @media only screen and (max-width:1280px) {}
 @media only screen and (max-width:960px) {}
 @media only screen and (max-width:768px) {}

@@ -1,12 +1,11 @@
-<?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/top_header.php');    
+<?php   
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
-if ($_SERVER['REQUEST_METHOD']=='POST'){  
+/*if ($_SERVER['REQUEST_METHOD']=='POST'){  
 require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connection.php');
     $inscribe= new Controller_Connection();
     $inscription = $inscribe->addUser();
-   }     
+   }*/     
 
 ?>      
         <link rel="stylesheet" href="/fantasy/views/style/inscription.css">
@@ -22,11 +21,10 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
 <?php
     }
 ?>
-                   
                     <div class="inscription_color col-md-9">
-                    </br><h1 id="inscription_title"> Bienvenue chez Fantasy</h1>
-                        <div id="inscription">
-                            <form action="/fantasy/index.php" method="post" name= "connect">
+                    </br><h1 id="inscription_title">Bienvenue chez Fantasy</h1>
+                        <div class="inscription col-md-offset-2 col-md-8">
+                            <form action="" method="post" name= "connect">
                                 <div class="form-group">
                                     <label class="inscription_title">Nom</label>
                                     <input type="text" id="name" class="champs form-control" name="nom" placeholder="Nom">
@@ -68,7 +66,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
                                     <label class="inscription_title">Mot de passe</label>
                                     <input type="password" id ="passtest" class="champs form-control" name="pass-test" placeholder="Password">
                                 </div> 
-                                 <input type="submit" id="submit" class="btn btn-default" name="valider">
+                                 <input class="top_header-button" type ="submit" name="submit" value="inscription">
                                  <input type="reset" id="refresh">
                             </form>
                             <!--<div id="error">

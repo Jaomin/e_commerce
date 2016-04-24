@@ -2,16 +2,16 @@
 
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/library/database.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/MODELS/Model_Admin.php');
-
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/MODELS/Model_Items.php');
 
 class Controller_Admin{
 
 
 public function addItem(){
+		
 		if (!empty($_POST['type']) && !empty($_POST['categorie']) && !empty($_POST['nom']) && !empty($_POST['description']) 
         && !empty($_POST['descriptionb']) &&!empty($_POST['prix']) && !empty($_POST['stock']) && !empty($_POST['picture']))
-		{  
-        	 
+		{  echo('toto');
 		  $tab = array(
             'type'=> htmlspecialchars($_POST['type']),
             'categorie'=> htmlspecialchars($_POST['categorie']),
@@ -21,17 +21,18 @@ public function addItem(){
             'prix'=> htmlspecialchars($_POST['prix']),
             'quantite'=> htmlspecialchars($_POST['stock']),
             'picture'=> htmlspecialchars($_POST['picture'])
-          
             );	
 			
 			$add = new Model_Admin();
 			$addItem = $add ->addItem($tab);										
-		}else{
+		}
+		else{
 			$message = 'veuillez remplir tous les champs';
 			return $message;
+			}
 		}
-		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration.php');
-	}
+	
+
 
 	public function modifyItem(){
 
@@ -52,16 +53,58 @@ public function addItem(){
 			$update = $item -> updateItem($tab, $tab['itemName']);
 			
 		}
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/administration.php');
 		
 	
 	}
 
-	public function deleteItems($nom){
+//DELETE
+	public function listAllTypeNamesDel(){
+	$type = new Model_Admin();
+	$mytype = $type -> allTypeName();
+	require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/deleteItem.php');
+	return $mytype;
+
+	}
+	public function showItemsDel($typeName){
+		$produits = new Model_items();
+		$mesproduits = $produits ->getItems($typeName);
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/deleteItem.php');
+		return $mesproduits;
+	}
+	
+	public function deleteItems(){
+		if(isset($_POST['choose']) && isset($_POST['delete'])){
+    	$nom = $_POST['choose'];
 		$del = new Model_Admin();
 		$delete = $del-> deleteItem($nom);
-		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration.php');
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/administration.php');
 	}
 
+}
+
+//MODIFY
+public function showItems($typeName){
+		$produits = new Model_items();
+		$mesproduits = $produits ->getItems($typeName);
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem.php');
+		return $mesproduits;
+		
+	}
+	public function listAllTypeNames(){
+	$type = new Model_Admin();
+	$mytype = $type -> allTypeName();
+	require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem.php');
+	return $mytype;
+
+	}
+	//return the placeholder to increase the visibility for the admin
+	public function placeItem($nom){
+		$produit = new Model_Admin();
+		$monproduit = $produit ->positionItem($nom);
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem.php');
+		return $monproduit;
+		}
 }
 
 ?>

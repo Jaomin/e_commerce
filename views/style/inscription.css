@@ -6,11 +6,9 @@
 		border-radius:20px;
 		color: #ccff00;
 		height:42px;
-		margin: auto;
-		margin-bottom:20px;
-		margin-top:20px;
-		padding-top:5px;
-		width:60%;
+		margin:auto;
+		padding:10px 0px 0px 30px;
+		width:45%;
 	}
 	.inscription_title{
 		background-color: #183152;

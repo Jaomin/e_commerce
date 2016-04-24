@@ -6,13 +6,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/MODELS/Model_Items.php');
 
 class Controller_Items{
 
-	//return the placeholder to increase the visibility for the admin
-	public function placeItem($nom){
-		$produit = new Model_Items();
-		$monproduit = $produit ->positionItem($nom);
-		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/modifyItem.php');
-		return $monproduit;
-		}
+	
 
 	//permit the navigation
 	public function viewItems($typeName){
@@ -22,70 +16,6 @@ class Controller_Items{
 		return $mesproduits;
 		
 	}
-	
-	public function listAllItems(){
-		$produits = new Model_Items();
-		$mesproduits = $produits ->allItems();
-		return $mesproduits;
-		
-	}
-	
-	
-	/*public function addItem(){
-		if (!empty($_POST['type']) && !empty($_POST['categorie']) && !empty($_POST['nom']) && !empty($_POST['description']) 
-        && !empty($_POST['descriptionb']) &&!empty($_POST['prix']) && !empty($_POST['stock']) && !empty($_POST['picture']))
-		{  
-        	 
-		  $tab = array(
-            'type'=> htmlspecialchars($_POST['type']),
-            'categorie'=> htmlspecialchars($_POST['categorie']),
-            'nom'=> htmlspecialchars($_POST['nom']),
-            'description'=> htmlspecialchars($_POST['description']),
-            'descriptionb'=> nl2br($_POST['descriptionb']),
-            'prix'=> htmlspecialchars($_POST['prix']),
-            'quantite'=> htmlspecialchars($_POST['stock']),
-            'picture'=> htmlspecialchars($_POST['picture'])
-          
-            );	
-			
-			$add = new Model_Admin();
-			$addItem = $add ->addItem($tab);										
-		}else{
-			$message = 'veuillez remplir tous les champs';
-			return $message;
-		}
-		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration.php');
-	}
-
-	public function modifyItem(){
-
-		if (!empty($_POST['type']) && !empty($_POST['typeName']) && !empty($_POST['itemName']) && !empty($_POST['description'])
-			&& !empty($_POST['descriptionb']) && !empty($_POST['price']) && !empty($_POST['stock'])) {  
-			$tab = array(
-	        'type'=> htmlspecialchars($_POST['type']),
-	        'typeName'=> htmlspecialchars($_POST['typeName']),
-	        'itemName'=> htmlspecialchars($_POST['itemName']),
-	        'description'=> htmlspecialchars($_POST['description']),
-	        'descriptionb'=> htmlspecialchars($_POST['descriptionb']),
-	        'price'=> htmlspecialchars($_POST['price']),
-	        'stock'=> htmlspecialchars($_POST['stock']),
-	        'picture'=> htmlspecialchars($_POST['picture'])
-	        );
-				
-			$item = new Model_Admin();
-			$update = $item -> updateItem($tab, $tab['itemName']);
-			
-		}
-		
-	
-	}
-
-	public function deleteItems($nom){
-		$del = new Model_Admin();
-		$delete = $del-> deleteItem($nom);
-		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration.php');
-	}*/
-
 	//permit to have a total description of the item
 	public function viewItem($id){
 		$produit = new Model_Items();
@@ -93,12 +23,23 @@ class Controller_Items{
 		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/detail.php');
 		return $monproduit;
 	}
+	
+	//peut servir
+	public function listAllItems(){
+		$produits = new Model_Items();
+		$mesproduits = $produits ->allItems();
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem.php');
+		return $mesproduits;
+		
+	}
+	
+	
+	
 
-	public function createTrolley(){
+	public function createTrolley($item,$quantity){
 
-		if (isset($_POST['submit']) && !empty($monproduit) && !empty($_POST['quantity'])){
 			if(!empty($_SESSION['ident'])){
-				var_dump($monproduit);
+				var_dump($item);
 				if(empty($_SESSION['panier'])){
 							$check = new Model_items();
 							$checkTrolley = $check->checkTrolley();
@@ -118,13 +59,15 @@ class Controller_Items{
 						}
 				else{
 					$message = 'commande non effectuée';
+					return $message;
 
 					}
-				}
 				require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/panier.php');	
 				return $addproduct;
+				}
+				
 		}
-	}
+	
 
 
  	public function total(){

@@ -1,20 +1,19 @@
 <link rel="stylesheet" href="/fantasy/views/style/nav.css">
 <main>		
-	<div class="container">
+	
 		<div class="row">
 			<div class="col-md-12">
 				<aside class="list col-md-2">
 					<ul>
-						<li><a  href="/fantasy/index.php?page=accueil">&nbsp&nbspACCUEIL</a></li>
-						<li><a  href="/fantasy/index.php?page=beaute">&nbsp&nbspBEAUTE</a></li>
-						<li><a  href="/fantasy/index.php?page=bricolage">&nbsp&nbspBRICOLAGE</a></li>
-						<li><a  href="/fantasy/index.php?page=cuisine">&nbsp&nbspCUISINE</a></li>
-						<li><a  href="/fantasy/index.php?page=entretien">&nbsp&nbspENTRETIEN</a></li>
-						<li><a  href="/fantasy/index.php?page=informatique">&nbsp&nbspINFORMATIQUE</a></li>
-						<li><a  href="/fantasy/index.php?page=quotidien">&nbsp&nbspQUOTIDIEN</a></li>
-						<li><a  href="/fantasy/index.php?page=sorties">&nbsp&nbspSORTIES</a></li>
-						<li><a  href="/fantasy/index.php?page=sports">&nbsp&nbspSPORTS</a></li>
-						<li><a  href="/fantasy/index.php?page=voyages">&nbsp&nbspVOYAGES</a></li>						
+						<li><a  href="/fantasy/index.php?page=HOME">&nbsp&nbspHOME</a></li>
+						<li><a  href="/fantasy/index.php?page=BALTIQUE">&nbsp&nbspBALTIQUE</a></li>
+						<li><a  href="/fantasy/index.php?page=OCEANIQUE">&nbsp&nbspOCEANIQUE</a></li>
+						<li><a  href="/fantasy/index.php?page=ADRIATIQUE">&nbsp&nbspADRIATIQUE</a></li>
+						<li><a  href="/fantasy/index.php?page=IONNIENE">&nbsp&nbspIONNIENE</a></li>
+						<li><a  href="/fantasy/index.php?page=MERIDIONALE">&nbsp&nbspMERIDONALE</a></li>					
 					</ul>
+					<div class="infos col-md-12">
+						<p> Les meduses peuvent être dangereuses.</br>Avant de faire votre choix n'hesitez pas à parcourir le site de notre partenaire:</p>
+						 <a href= "http://www.perseus-net.eu/fr/species_of_jellyfish/index.html"><h3>PERSEUS</h3></a>
 				</aside>
 			

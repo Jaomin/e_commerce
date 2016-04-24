@@ -17,7 +17,6 @@ class Model_Connection{
 			'pass'=>$tab['pass'], 
 			);
 		$resultat=$this->db->recup($req, $tableau);
-
 		return $resultat;	
 		
 }

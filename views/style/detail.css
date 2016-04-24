@@ -1,23 +1,26 @@
-.detail{
-background-color:white;
-margin-left:50px;
-margin-top:30px;
-}
+
 .detail_buy_user{
 background-color:white;
 border-radius:30px;
 margin-bottom:20px;	
 }
 .detail_picture{
-	margin-top:20px;
-	padding-left:40px;
-	margin-bottom:40px;
+	background-attachment: fixed;
+	background-image:url("/fantasy/images/mer.jpg");
+	background-size:contain;
+	margin-top:10px;
+	margin-bottom:10px;
+	text-align:center;
+}
+.detail_picture-img{
+	border-radius:5px;
+	margin-bottom:30px;
 }
 .detail_free{
 	padding-top:0px;
 }
 .detail_description_title{
-	margin-top:30px;
+	margin-top:20px;
 
 }
 #detail_buy_price{
