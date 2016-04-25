@@ -5,9 +5,6 @@ border-radius:30px;
 margin-bottom:20px;	
 }
 .detail_picture{
-	background-attachment: fixed;
-	background-image:url("/fantasy/images/mer.jpg");
-	background-size:contain;
 	margin-top:10px;
 	margin-bottom:10px;
 	text-align:center;
@@ -15,6 +12,9 @@ margin-bottom:20px;
 .detail_picture-img{
 	border-radius:5px;
 	margin-bottom:30px;
+	width: 600px;
+	overflow-x: auto;
+	white-space: nowrap
 }
 .detail_free{
 	padding-top:0px;

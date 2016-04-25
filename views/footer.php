@@ -3,8 +3,7 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-8">
-                    <p><?php
-                    echo  date('Y') ;?> Copyright.</p></br>
+                    <p><?php echo  date('Y') ;?> Copyright.</p></br>
                     <a href="/fantasy/views/administration/administration.php">admin</a></br>
                 </div>
                 <div class="col-md-4">

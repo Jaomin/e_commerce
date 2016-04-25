@@ -3,11 +3,11 @@ require_once( $_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Items.p
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
 
-foreach ($monproduit as $cle => $champs){				
+foreach ($monProduit as $cle => $champs){				
 	?>
 	<link rel="stylesheet" href="/fantasy/views/style/detail.css">
+
 				<div class="detail col-md-10">
-					<form action ="" method="post" name="add">
 						<div class="detail_picture col-xs-12 col-sm-10 col-md-12">
 							<h1 ><?php echo $champs['itemName']; ?></h1>
 							<img class= "detail_picture-img" src="/fantasy/images/<?php echo $champs['picture'];?>" width="600px" />
@@ -26,11 +26,16 @@ foreach ($monproduit as $cle => $champs){
 								<div class="col-xs-12 col-sm-6 col-md-3">
 									<p id="detail_buy_price"><?php echo $champs['price']; ?> euros</p>
 								</div>
+								<form action ="/fantasy/index.php?" method="get" name="buy">
 								<div class="detail_buy_button col-xs-12 col-sm-6 col-md-2">
 									<input id="detail_buy_text" type="text" class="form-control" name="quantity" placeholder="Quantite">
 								</div>
-								<div class="detail_buy_submit col xs-12 col-sm-6 col-md-3">			
-									<input  class="" type ="submit" name="add" value="Ajouter">						
+								<div class="detail_buy_submit col xs-12 col-sm-6 col-md-3">	
+									<input type="hidden" name="stock" value="<?php echo $champs['stock']?>">
+									<input type="hidden"name="idb"	value= "<?php echo $champs['id']?>">
+									<input type="hidden"name="name"	value= "<?php echo $champs['itemName']?>">
+									<input type="hidden"name="price" value= "<?php echo $champs['price']?>">
+									<input type ="submit" name="add" value="Ajouter">						
 								</div>
 							</div>
 						</div>
@@ -39,20 +44,7 @@ foreach ($monproduit as $cle => $champs){
 			
 
 <?php
-					
-	
-	if (isset($_POST['add']) && !empty ($_POST['quantity'])){
-		$item=$champs['id'];
-		$quantity=$_POST['quantity'];
-		var_dump($quantity);
-		var_dump($item);
-		$buy=new controller_Items($item);
-		$buyitem=$buy-> createTrolley ($item, $quantity);
-
-	}
 }
-
-
 require_once ($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/footer.php'); 	
 
 

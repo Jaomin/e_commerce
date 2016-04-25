@@ -22,13 +22,13 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
 					<div class="header-connection  col-xs-12 col-sm-8 col-md-4">
 							<form action="/fantasy/index.php" method="post">
 								<input class="header-button" type="text" name="ident"  placeholder = "Pseudo" >
-								<input class ="header-button" type="password" name="pass" placeholder = "Mot de passe">
+								<input  class ="header-button" type="password" name="pass" placeholder = "Mot de passe">
 								<input class="header-button-ok" type="submit" name="submit" value="ok">
 							</form>	
 					</div>
-					<div  class="header-inscription col-xs-6 col-sm-4 col-md-2">					
+					<div class="header-inscription col-xs-6 col-sm-4 col-md-2">					
 						<form action ="/fantasy/index.php" method="get">
-						<input  class="header-button" type ="submit" name="action" value="inscription">
+						<input id="hb3" class="header-button" type ="submit" name="action" value="inscription">
 						</form>							
 					</div>
 					
@@ -41,11 +41,11 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
 				}
 				if (!empty($_SESSION['ident'])) {
 					echo'<div class="header-session col-xs-6 col-sm-6 col-md-3">';
-					echo 'Bonjour '.$_SESSION['ident'];
+					echo '<p id="hb2" >Bonjour '.$_SESSION['ident'].'</p>';
 					echo'</div>';
 					echo '<div class="header-session col-xs-6 col-md-2">';
 					echo '<form action ="" method="post">
-					<input id="header-button" type ="submit" name="deconnect" value="deconnexion">
+					<input id="hb4" class="header-button" type ="submit" name="deconnect" value="deconnexion">
 					</form></div>';
 					if (isset($_POST['deconnect'])){
 					session_destroy();
@@ -60,7 +60,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
 ?>
 				
 				<div  class="header-basket col-xs-6 col-sm-6 col-md-1">
-					<a class="header-img" href="/fantasy/views/items/panier.php"><img class="header-img" src="/fantasy/images/bag.png" height="30px"/></a>
+					<a class="header-img" href="/fantasy/views/items/basket.php"><img class="header-img" src="/fantasy/images/bag.png" width="80px"/></a>
 				</div>	
 			</div>
 		</header>

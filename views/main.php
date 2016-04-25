@@ -10,7 +10,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
  				foreach($mesproduits as $item){
 	?>
 								
-									<div class="shop_pictures col-xs-12 col-sm-6 col-md-5">
+									<div class="shop_pictures col-xs-12 col-sm-6 col-md-3">
 										<h1><?php echo $item['itemName'];?></h1>
 										<a href="/fantasy/index.php?id=<?php echo $item['id']; ?>" ><img class="shop_pictures-img" src="/fantasy/images/<?php echo $item['picture'];?>" alt="<?php $item['itemName'];?>" height="200px"/>
 										<div class="shop_price-text">

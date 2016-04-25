@@ -5,13 +5,16 @@
 
 }
 body{ 
+	background-attachment: fixed;
+	background-image:url("/fantasy/images/mer.jpg");
+	background-size:cover;
 	color: #585858;
 	margin:0;
 	padding:0;
 	
 }	
 h1{
-	color:teal; 
+	color:#d8ff3f; 
 	font-family:Georgia,serif,Times;
 	font-size: 20px;
 	font-weight:500;
@@ -25,7 +28,7 @@ h2{
 }
 
 h3{
-	color:#585858;
+	color:#a9c737;
 	font-family:Georgia,serif,Times;		
 	font-size:20px;
 	font-weight:200;
@@ -33,7 +36,7 @@ h3{
 	text-transform:uppercase;
 }
 h4{
-	color:teal; 
+	color:#a9c737; 
 	font-family:Georgia,serif,Times;
 	font-size: 15px;
 	font-weight:400;
@@ -61,13 +64,10 @@ textarea{
 
 p{
 font-family:Georgia,serif,Times;
-color:#585858;
+color:#B0E0E6;
 }
 
 .shop{
-background-attachment: fixed;
-background-image:url("/fantasy/images/mer.jpg");
-background-size:contain;
 border-radius:5px;	
 }
 	
@@ -77,6 +77,11 @@ transition: 2 ease-in-out;
 }
 .shop_pictures-img{
 	border-radius:10px;
+	width: 200px;
+	overflow-x: auto;
+	white-space: nowrap;
+
+
 }
 .shop_pictures-img:hover{
 	border-radius:10px;
@@ -84,7 +89,7 @@ transform:scale(0.95);
 
 }
 .shop_price-text{
-	margin-left:52%;
+	margin-left:30%;
 }
 
 

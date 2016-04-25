@@ -11,7 +11,7 @@ public function addItem(){
 		
 		if (!empty($_POST['type']) && !empty($_POST['categorie']) && !empty($_POST['nom']) && !empty($_POST['description']) 
         && !empty($_POST['descriptionb']) &&!empty($_POST['prix']) && !empty($_POST['stock']) && !empty($_POST['picture']))
-		{  echo('toto');
+		{  
 		  $tab = array(
             'type'=> htmlspecialchars($_POST['type']),
             'categorie'=> htmlspecialchars($_POST['categorie']),
@@ -24,10 +24,12 @@ public function addItem(){
             );	
 			
 			$add = new Model_Admin();
-			$addItem = $add ->addItem($tab);										
+			$addItem = $add ->addItem($tab);
+			require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/addItem.php');										
 		}
 		else{
 			$message = 'veuillez remplir tous les champs';
+			require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/addItem.php');	
 			return $message;
 			}
 		}
@@ -63,14 +65,14 @@ public function addItem(){
 	$type = new Model_Admin();
 	$mytype = $type -> allTypeName();
 	require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/deleteItem.php');
-	return $mytype;
+	
 
 	}
 	public function showItemsDel($typeName){
 		$produits = new Model_items();
-		$mesproduits = $produits ->getItems($typeName);
+		$chooseItem = $produits ->getItems($typeName);
 		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/deleteItem.php');
-		return $mesproduits;
+		
 	}
 	
 	public function deleteItems(){
@@ -84,26 +86,25 @@ public function addItem(){
 }
 
 //MODIFY
-public function showItems($typeName){
+		public function showItems($typeName){
 		$produits = new Model_items();
-		$mesproduits = $produits ->getItems($typeName);
+		$chooseItem = $produits ->getItems($typeName);
 		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem.php');
-		return $mesproduits;
 		
 	}
 	public function listAllTypeNames(){
 	$type = new Model_Admin();
 	$mytype = $type -> allTypeName();
 	require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem.php');
-	return $mytype;
+	
 
 	}
 	//return the placeholder to increase the visibility for the admin
 	public function placeItem($nom){
 		$produit = new Model_Admin();
-		$monproduit = $produit ->positionItem($nom);
-		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem.php');
-		return $monproduit;
+		$modProduct = $produit ->positionItem($nom);
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem2.php');
+		
 		}
 }
 

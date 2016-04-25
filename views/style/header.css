@@ -1,22 +1,56 @@
 
 header{
-	
-	height:50px;
-	
+	height:100px;
 }
-.header-session{
-}
+
 
 .header-button{
+	background-color:#B0E0E6;
+	border-radius:20px;
 	font-size:10px;
-	height:18px;
+	text-align:center;
 	width:80px;
+}
+.header-button-ok{
+	background-color:#B0E0E6;
+	border-radius:40px;
+	font-size:10px;
+	height:20px;
+	margin-top:7px;
+	width:30px;
+
+}
+.hb1{
+	border-radius:40px;
+	margin-top:5px;
+	height:50px;
+}
+
+#hb2{
+	background-color:#B0E0E6;
+	border-radius:150px;
+	color:#585858;
+	height:100px;
+	margin-top: 2px;
+	padding-top:40px;
+	text-align:center;
+	width:100;
+	
+}
+#hb3{
+	border-radius:40px;
+	margin-top:50px;
+	height: 60px;
+}
+#hb4{
+	border-radius:40px;
+	margin-top:20px;
+	height: 30px;
 }
 
 
-
-#header-basket{
-	width:20px;
+.header-img{
+	border-radius:30px;
 	
 	}
 

@@ -65,8 +65,8 @@ class Controller_Connection{
 			if (!empty($userOk)){
 				if ($userOk[0]['admin'] == 1){
 					$_SESSION['admin'] = $userOk[0]['admin'];
-					require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration.php');
-					
+				header('location:/fantasy/views/administration/administration.php');
+					$_SESSION['ident']= $_POST['ident'];
 				}
 				else{
 				$_SESSION['ident'] = $_POST['ident'];

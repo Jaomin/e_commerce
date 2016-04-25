@@ -11,7 +11,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
                     <div class="row">
                         <div class="col-lg-offset-3 col-lg-6">
                             <form action="/fantasy/index.php" method="post" name="addItem">
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <input type="text" class="form-control" name="type" placeholder="type">
                                 </div>
                                 <div class="form-group">
@@ -29,14 +29,14 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" name = "prix" placeholder="prix">
-                                 </div>
-                                  <div class="form-group">
+                                </div>
+                                <div class="form-group">
                                     <input type="text" class="form-control" name="stock" placeholder="stock">
-                                 </div>
-                                  <div class="form-group">
+                                </div>
+                                <div class="form-group">
                                     <input type="file" class="form-control" name="picture" placeholder="adresse de l'image">
-                                 </div>
-                                 <button type="submit" class="btn btn-default" name="addItem">AJOUTER</button>
+                                </div>
+                                <button type="submit" class="btn btn-default" name="addItem">AJOUTER</button>
                                  <?php
                                  if(!empty($message)){
                                  echo $message;
@@ -48,9 +48,9 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
             </div>
         </div>    
        
-     
-    </body>
-</html>
+<?php
+ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/footer.php'); 
+ ?>
 
 
 
