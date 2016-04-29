@@ -1,11 +1,9 @@
 <?php   
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
-/*if ($_SERVER['REQUEST_METHOD']=='POST'){  
-require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connection.php');
-    $inscribe= new Controller_Connection();
-    $inscription = $inscribe->addUser();
-   }*/     
+
+$siteKey="6LcIdx4TAAAAABMEIksk6jHtHfjlcpPoyi2h88HV";
+$secret='6LcIdx4TAAAAAFPuop9yATj1BbeIrr_Vj6gY8Yw1';
 
 ?>      
         <link rel="stylesheet" href="/fantasy/views/style/inscription.css">
@@ -14,18 +12,18 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
   if (!empty($message)){ 
 ?>           
          
-        <div class="col-md-9">
+        <div class="  col-xs-12 col-sm-6 col-md-9">
                 <h4><?php echo $message; ?></h4>
         </div>
             
 <?php
     }
 ?>
-                    <div class="inscription_color col-md-9">
+                    <div class="inscription_color col-xs-12 col-sm-6 col-md-9">
                     </br><h1 id="inscription_title">Bienvenue chez Fantasy</h1>
                         <div class="inscription col-md-offset-2 col-md-8">
                             <form action="" method="post" name= "connect">
-                                <div class="form-group">
+                                <div class="form-group ">
                                     <label class="inscription_title">Nom</label>
                                     <input type="text" id="name" class="champs form-control" name="nom" placeholder="Nom">
                                 </div>
@@ -68,15 +66,17 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
                                 </div> 
                                  <input class="top_header-button" type ="submit" name="submit" value="inscription">
                                  <input type="reset" id="refresh">
+                             </div>
                             </form>
-                            <!--<div id="error">
-                                <p>Vous n'avez pas rempli correctement les champs du formulaire !</p>
-                                </div>-->
+                            <div class="row">
+                                 <div class="col-md-offset-5 col-md-4 g-recaptcha" data-sitekey="6LcIdx4TAAAAABMEIksk6jHtHfjlcpPoyi2h88HV">
+                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/footer.php');   
 ?>      

@@ -1,5 +1,4 @@
 <?php 
-require_once( $_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Items.php');	
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
 ?>

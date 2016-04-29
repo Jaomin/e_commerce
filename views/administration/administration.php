@@ -1,8 +1,8 @@
 
 <?php    
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Admin.php');     
-require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
-require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');  
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php');  
+require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
 ?>
 <link rel="stylesheet" href="/fantasy/views/style/administration.css">
 

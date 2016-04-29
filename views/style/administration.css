@@ -1,3 +1,7 @@
+.admin{
+	height:600px;
+}
+
 .modify_listDer{
 	color: #585858;
 	height:50px;
@@ -19,8 +23,40 @@ select{
 	margin-top:50px;
 	text-transform:uppercase;
 }
+.panier{
+	margin-top:500px;
+}
 
-@media only screen and (max-width:1280px) {}
-@media only screen and (max-width:960px) {}
-@media only screen and (max-width:768px) {}
-@media only screen and (max-width:480px) {}
+@media only screen and (max-width:1280px) {
+	/*belong to nav*/
+	.infos{
+	width:300px
+	}
+}
+@media only screen and (max-width:960px) {
+	/*belong to nav*/
+	.list{
+		height:800px;
+	}
+	.infos{
+	width:300px
+	}
+}
+@media only screen and (max-width:768px) {
+	/*belong to nav*/
+	.list{
+		height:300px;
+	}
+	.infos{
+	width:300px
+	}
+}
+@media only screen and (max-width:480px) {
+	/*belong to nav*/
+	.list{
+		height:300px;
+	}
+	.infos{
+	width:300px
+	}
+}

@@ -1,0 +1,21 @@
+table{
+	margin-left:100px;
+}
+th{
+	color:#B0E0E6;
+	font-family:Georgia,serif,Times;
+	font-size:20px;
+	text-transform:uppercase;
+}
+tr{
+	height:50px;
+}
+td{ 
+width:200px;
+}
+.buy{
+	margin-top:30px;
+}
+.hidden{
+	height:800px;
+	}

@@ -1,6 +1,4 @@
 <?php
-
-require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/library/database.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/MODELS/Model_Admin.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/MODELS/Model_Items.php');
 

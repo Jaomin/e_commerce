@@ -9,7 +9,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
             <div class="row">
                 <div class="modify_item col-md-10">
                     <div class="row">
-                        <div class="col-lg-offset-3 col-lg-6">
+                        <div class=" col-sm-12 col-lg-offset-3 col-lg-6">
                             <form action="/fantasy/index.php" method="post" name="addItem">
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="type" placeholder="type">

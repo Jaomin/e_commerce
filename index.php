@@ -6,6 +6,113 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_Admin.ph
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/controllers/Controller_basket.php');	
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php'); 
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
+if (isset($_GET['page']) && $_GET['page'] == "HOME" ){
+?>
+<script src="http://localhost/fantasy/views/js/jquery.min.js"></script>
+<script src="http://localhost/fantasy/views/js/bootstrap.min.js"></script>  
+  
+  
+  <div class="shop col-md-10">
+  <div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li class="item1"></li>
+      <li class="item2 active"></li>
+      <li class="item3"></li>
+      <li class="item4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="/fantasy/images/baltique1.jpg" alt="agneska" width="460" height="345">
+        <div class="carousel-caption">
+         <p>AGNESKA</p>
+        </div>
+      </div>
+
+
+      <div class="item">
+        <img src="/fantasy/images/ion1.jpg" alt="yakare" width="460" height="345">
+        <div class="carousel-caption">
+          <p>YAKARE</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="/fantasy/images/meri4 .jpg" alt="zoe" width="460" height="345">
+        <div class="carousel-caption">
+          <p>ZOE</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/fantasy/images/ion2 .jpg" alt="jaomin" width="460" height="345">
+        <div class="carousel-caption">
+          <p>JAOMIN</p>
+        </div>
+      </div>
+  
+    </div>
+    <script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel();
+    
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+    });
+    $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+    });
+    $(".item4").click(function(){
+        $("#myCarousel").carousel(3);
+    });
+    
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+});
+</script>
+</div>
+</div>
+<?php
+}
+/**
+*NAVIGATION
+*permit to get the items by typeName to navigate un the website. the first function should permit a dynamic navigation.
+*/
+  /*$mytype = new controller_items();
+  $mytype -> nav();*/
+
+if (isset($_GET['page'])){
+  if ($_GET['page']== 'home'){
+   header('location:/fantasy/views/home.php');  
+  }
+  else{
+    $typeName = strVal($_GET['page']);  
+    $produits= new Controller_Items();
+    $mesproduits = $produits -> viewItems($typeName);
+  }
+}
+  
+/**
+* permit to get a detailed view of the item selected
+*/
+if (isset($_GET['id'])){
+  $id =intVal($_GET['id']);
+  $produit= new Controller_Items();
+  $monproduit = $produit->viewItem($id);
+}
 
 /**
 *CONNEXION
@@ -15,25 +122,25 @@ if (!empty($_POST['ident'])&& !empty($_POST['pass'])){
     $connect= new Controller_Connection();
     $connection = $connect->checkIdentExists();
 	}
+
+
+/**
+*BASKET
+*permit to get a basket page empty
+*/
 if (!isset($_SESSION['panier'])){
 $_SESSION['panier']= array();
 }
-/**
-*NAVIGATION
-*permit to get the items by typeName to navigate un the website
-*/
-if (isset($_GET['page'])){
-		$typeName = strVal($_GET['page']);	
-		$produits= new Controller_Items();
-		$mesproduits = $produits -> viewItems($typeName);
-	}
-/**
-* permit to get a detailed view of the item selected
-*/
-if (isset($_GET['id'])){
-	$id =intVal($_GET['id']);
-	$produit= new Controller_Items();
-	$monproduit = $produit->viewItem($id);
+/*if (isset($_SESSION['panier'])){
+  $total=new controller_basket();
+  $total-> total();
+}*/
+if (isset ($_GET['validate'])){
+  $manageqty = New Controller_basket();
+  $manageqty -> substractItem();
+  $full = new Controller_basket();
+  $full->fullBasket();
+
 }
 
 
@@ -62,7 +169,12 @@ if (isset($_GET['quantity'])){
 	$buyitem=$buy-> createTrolley ($quantity, $id, $price,$itemName, $stock);	
 		}
 	
+if (isset($_GET['deleteBuy'])){
+	$cle = $_GET['deleteBuy'];
+	$delete= new Controller_basket();
+	$myDelete = $delete -> deleteBuy($cle);
 
+}
 /**	
 *ADMINISTRATION
 *the administrator choose the action he wants to make on the website
@@ -134,15 +246,6 @@ if (isset($_POST['delete'])){
 	$delProduct = $product->deleteItems();
 }
 
-if (isset($_GET['deleteBuy'])){
-	$cle = $_GET['deleteBuy'];
-	$delete= new Controller_Items();
-	$myDelete = $delete -> deleteBuy($cle);
-
-}
-
 
  require_once ($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/footer.php'); 
  ?>
- 		
-	

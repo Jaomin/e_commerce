@@ -56,11 +56,25 @@ margin-bottom:20px;
 	background-color:#F5F5F5;	
 	padding-left:14px;
 	}
+	/*belong to aside*/
+	.list{
+		height:600px;
+	}
+.detail_picture{
+		text-align:right;
+	}
 }
 @media only screen and (max-width:768px) {
 	.detail_buy_button{
 	background-color:#F5F5F5;	
 	padding-left:14px;
+	}
+	/*belong to aside*/
+	.list{
+		height:300px;
+	}
+	.detail_picture{
+		text-align:right;
 	}
 	
 }
@@ -69,5 +83,11 @@ margin-bottom:20px;
 	background-color:#F5F5F5;	
 	padding-left:14px;
 	}
-	
+	/*belong to aside*/
+	.list{
+		height:300px;
+	}
+	.detail_picture{
+		text-align:right;
+	}
 }

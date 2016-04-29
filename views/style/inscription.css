@@ -18,7 +18,31 @@
 		padding-left:10px;
 		width:27%;
 	}
-@media only screen and (max-width:1280px) {}
-@media only screen and (max-width:960px) {}
-@media only screen and (max-width:768px) {}
-@media only screen and (max-width:480px) {}
+	.g-recaptcha{
+		height:30px;
+
+	}
+@media only screen and (max-width:1280px) {
+	#inscription_title{
+		width:380px;
+		border-radius:60px;
+	}
+}
+@media only screen and (max-width:960px) {
+	#inscription_title{
+		height:100px;
+		padding-top:30px;
+		width:200px;
+	}
+	.inscription_title{
+		width:100px;
+		border-radius:60px;
+	}
+}
+@media only screen and (max-width:768px) {
+	
+	}
+}
+@media only screen and (max-width:480px) {
+	
+}

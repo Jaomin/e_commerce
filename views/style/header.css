@@ -2,7 +2,9 @@
 header{
 	height:100px;
 }
-
+.container{
+	padding-top:0px !important;
+}
 
 .header-button{
 	background-color:#B0E0E6;
@@ -54,12 +56,24 @@ header{
 	
 	}
 
-	
-.header-connexion{
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  	height:480px;
+      width: auto;
+      margin: auto;
+  }
+  #myCarousel {
+  	/*background-color: #ffffff;*/
+  	height:480px;
+  	width: auto;
+  }
+  
+  
+ .carousel-caption {
+text-align:left;
+padding:0px 0px 0px 50px;
 
 }
-}
-
 
 
 @media only screen and (max-width:1280px) {
@@ -76,7 +90,13 @@ header{
 		}
 		.header-inscription{
 			margin-left:80px;
+			padding-top:20px;
+			
 		}
+		#hb4{
+			margin-left:200px;
+		}
+		
 
 @media only screen and (max-width:480px) {
 		.header{
@@ -84,4 +104,9 @@ header{
 		}
 		.header-inscription{
 			margin-left:80px;
+			
 		}
+		#hb4{
+			margin-left:100px;
+		}
+	

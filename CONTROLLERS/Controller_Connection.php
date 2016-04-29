@@ -32,7 +32,6 @@ class Controller_Connection{
 								$inscribe = new Model_Connection();
 								$inscription = $inscribe ->getInscribe($tab);
 								$_SESSION['ident'] = $tab['ident'];
-								var_dump($_SESSION['ident']);
 								require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php');
 								header('location:/fantasy/index.php');
 								return $_SESSION;
@@ -67,6 +66,7 @@ class Controller_Connection{
 					$_SESSION['admin'] = $userOk[0]['admin'];
 				header('location:/fantasy/views/administration/administration.php');
 					$_SESSION['ident']= $_POST['ident'];
+					$_SESSION['idu'] = $userOk[0]['idu'];
 				}
 				else{
 				$_SESSION['ident'] = $_POST['ident'];
@@ -74,7 +74,11 @@ class Controller_Connection{
 				}
 			}
 			else {
-				$message ='identifiant ou mot de passe incorrect';	
+				$message ='identifiant ou mot de passe incorrect';
+				require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php');
+
+				return $message;
+				
 
 			}
 		

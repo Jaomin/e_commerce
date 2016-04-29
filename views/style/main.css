@@ -14,7 +14,7 @@ body{
 	
 }	
 h1{
-	color:#d8ff3f; 
+	color:#84ddd7; 
 	font-family:Georgia,serif,Times;
 	font-size: 20px;
 	font-weight:500;
@@ -36,7 +36,7 @@ h3{
 	text-transform:uppercase;
 }
 h4{
-	color:#a9c737; 
+	color:#d8ff3f; 
 	font-family:Georgia,serif,Times;
 	font-size: 15px;
 	font-weight:400;
@@ -85,7 +85,7 @@ transition: 2 ease-in-out;
 }
 .shop_pictures-img:hover{
 	border-radius:10px;
-transform:scale(0.95);		
+	transform:scale(0.95);		
 
 }
 .shop_price-text{

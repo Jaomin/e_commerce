@@ -6,14 +6,15 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php');
 foreach ($monProduit as $cle => $champs){				
 	?>
 	<link rel="stylesheet" href="/fantasy/views/style/detail.css">
+	
 
 				<div class="detail col-md-10">
-						<div class="detail_picture col-xs-12 col-sm-10 col-md-12">
+						<div class="detail_picture col-xs-12 col-sm-6 col-md-12">
 							<h1 ><?php echo $champs['itemName']; ?></h1>
 							<img class= "detail_picture-img" src="/fantasy/images/<?php echo $champs['picture'];?>" width="600px" />
 						</div>
 						<div class="row">
-							<div class=" col xs-12 col-sm-10 col-md-12">
+							<div class=" col xs-12 col-sm-8 col-md-12">
 								<h3 class="detail_description_title"><?php echo $champs['description']; ?></h3>
 								<p class="detail_description_total" ><?php echo $champs['descriptionb']; ?></p>
 							</div>
@@ -21,7 +22,7 @@ foreach ($monProduit as $cle => $champs){
 						<div class="row">
 							<div class="detail_buy_user col-md-12">
 								<div class="detail_buy_stock_box col-xs-12 col-sm-6 col-md-4">
-									<p id="detail_buy_stock"><?php echo $champs['stock']; ?> articles disponibles</p>
+									<p id="detail_buy_stock"><?php echo $champs['stock']; ?> DISPONIBLES</p>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-3">
 									<p id="detail_buy_price"><?php echo $champs['price']; ?> euros</p>
@@ -46,6 +47,5 @@ foreach ($monProduit as $cle => $champs){
 <?php
 }
 require_once ($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/footer.php'); 	
-
 
 	?>		

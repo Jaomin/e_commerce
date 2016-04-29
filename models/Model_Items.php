@@ -38,7 +38,12 @@ class Model_Items{
 	}
 
 
-	
+	public function navi(){
+		$req = ("SELECT * FROM categories");
+		$tab = array();
+		$result = $this->db->recup($req, $tab);
+		return $result;
+	}
 
 	
 }

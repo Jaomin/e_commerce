@@ -18,51 +18,58 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/models/model_basket.php');
 
 					if ($itemFound == false){
 						$_SESSION['panier'][] = array(
-							'idItem'=>	$id,
+							'idItem'=>$id,
 							'itemName'=>$itemName,
 							'price'=>$price,
 							'quantity'=>$quantity,
 							'idu'=>$_SESSION['idu'],
-							'ident'=>$_SESSION['ident']
+							'ident'=>$_SESSION['ident'],
+							
 						);
-					}
+						
 				}
-				require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/basket.php');
-			}
-		else{
-			$message='veuillez vous connecter!';
-			require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/basket.php');
-		}
-	}
-
-
-
-	public function deleteBuy($cle){
-		var_dump($cle);
-		var_dump($_SESSION['panier'][$cle]);
-		unset($_SESSION['panier'][$cle]);
-
-
-	}
-
-
-	public function total(){
-		$total = 0;
-		if (isset($_SESSION['panier']) && $_SESSION['panier']['close']){
-			return true;
-		}
-		else{
-			return false;
-			}
-		}
+				$montant=0;
+					foreach ($_SESSION['panier'] as $key => $price){
+						$montant=  $montant + $price['price']*$price['quantity'];
+						require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/basket.php');	
+					}
 				
-			
-			
+			}
+	}
+}
+	
+	
+		
+	public function deleteBuy($cle){
+		unset($_SESSION['panier'][$cle]);
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/basket.php');
+	}
+
+	
 					//je soustrais la quantité de ma table items
 	public function substractItem(){
-		$substract = new Model_Items();
-		$substractItem = $substract -> substract($id, $quantity);
-		}		
+		foreach($_SESSION['panier'] as $key=>$item){
+			$id= $item['idItem']; 
+			$quantity = $item['quantity'];
+			$substract = new Model_basket();
+			$substractItem = $substract -> substract($id, $quantity);
+		}	
+		}
+
+	public function fullBasket(){
+		foreach($_SESSION['panier'] as $key=>$item){
+			$idItem= $item['idItem']; 
+			$itemName= $item['itemName'];
+			$quantity= $item['quantity']; 
+			$price= $item['price']; 
+			$idu = $_SESSION['idu'];
+			$full=new Model_basket();
+			$full-> delivery($idItem, $itemName, $price, $quantity, $idu);
+			unset($_SESSION['panier'][$key]);
+
 	}
+	require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/basket.php');	
+	}
+}
 
 ?>
