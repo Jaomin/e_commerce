@@ -19,7 +19,6 @@ class Controller_Items{
 		$produit = new Model_Items();
 		$monProduit = $produit ->getItem($id);
 		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/detail.php');
-		
 	}
 	
 

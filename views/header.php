@@ -23,7 +23,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
 			<div class="row">
 				<div class="col-md-12">
 					<div class="header-connection  col-xs-12 col-sm-8 col-md-3">
-							<form action="/fantasy/index.php" method="post">
+							<form action="" method="post">
 								<input class="header-button" type="text" name="ident"  placeholder = "Pseudo" >
 								<input  class ="header-button" type="password" name="pass" placeholder = "Mot de passe">
 								<input class="header-button-ok" type="submit" name="submit" value="ok">
@@ -61,7 +61,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'fantasy/controllers/Controller_Connectio
 ?>
 				
 				<div  class="header-basket col-xs-3 col-sm-3 col-md-1">
-					<a class="header-img" href="/fantasy/views/items/basket.php"><img class="header-img" src="/fantasy/images/bag.png" width="80px"/></a>
+					<a class="header-img" href="/fantasy/index.php?module=basket"><img class="header-img" src="/fantasy/images/bag.png" width="80px"/></a>
 				</div>
 				
 			</div>

@@ -1,9 +1,11 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/models/model_basket.php');
 
+
 	class controller_basket {
 
 	public function createTrolley($quantity, $id, $price, $itemName, $stock){
+
 			if(!empty($_SESSION['ident'])){
 				if ($quantity<=$stock){
 					$itemFound = false;
@@ -26,7 +28,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/models/model_basket.php');
 							'ident'=>$_SESSION['ident'],
 							
 						);
-						
+				
 				}
 				$montant=0;
 					foreach ($_SESSION['panier'] as $key => $price){

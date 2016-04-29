@@ -23,6 +23,7 @@ class Model_Basket {
 			"idu" => $idu
 		);
 		$resultat = $this->db->recup($requete, $tableau);
+	
 
 	}
 			

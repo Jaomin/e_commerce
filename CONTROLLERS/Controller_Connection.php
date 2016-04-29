@@ -33,7 +33,6 @@ class Controller_Connection{
 								$inscription = $inscribe ->getInscribe($tab);
 								$_SESSION['ident'] = $tab['ident'];
 								require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php');
-								header('location:/fantasy/index.php');
 								return $_SESSION;
 								}
 					
@@ -64,7 +63,7 @@ class Controller_Connection{
 			if (!empty($userOk)){
 				if ($userOk[0]['admin'] == 1){
 					$_SESSION['admin'] = $userOk[0]['admin'];
-				header('location:/fantasy/views/administration/administration.php');
+					require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/administration.php');
 					$_SESSION['ident']= $_POST['ident'];
 					$_SESSION['idu'] = $userOk[0]['idu'];
 				}

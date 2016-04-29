@@ -1,6 +1,7 @@
 
 
 <link rel="stylesheet" href="/fantasy/views/style/nav.css">
+
 <main>		
 	
 		<div class="row">
@@ -12,7 +13,7 @@
 						<li><a  href="/fantasy/index.php?page=OCEANIQUE">&nbsp&nbspOCEANIQUE</a></li>
 						<li><a  href="/fantasy/index.php?page=ADRIATIQUE">&nbsp&nbspADRIATIQUE</a></li>
 						<li><a  href="/fantasy/index.php?page=IONNIENE">&nbsp&nbspIONNIENE</a></li>
-						<li><a  href="/fantasy/index.php?page=MERIDIONALE">&nbsp&nbspMERIDONALE</a></li>
+						<li><a  href="/fantasy/index.php?page=MERIDIONALE">&nbsp&nbspMERIDONALE</a></li> 
 						
 <?php 
 
