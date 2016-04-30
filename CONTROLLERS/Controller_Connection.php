@@ -66,6 +66,7 @@ class Controller_Connection{
 					require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/administration.php');
 					$_SESSION['ident']= $_POST['ident'];
 					$_SESSION['idu'] = $userOk[0]['idu'];
+
 				}
 				else{
 				$_SESSION['ident'] = $_POST['ident'];
@@ -75,14 +76,28 @@ class Controller_Connection{
 			else {
 				$message ='identifiant ou mot de passe incorrect';
 				require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php');
-
-				return $message;
-				
-
 			}
 		
 		}
 	}
+	public function getMessage(){
+		if (!empty($_POST['nom']) && !empty($_POST['prenom'] && !empty($_POST['mail']) && !empty($_POST['message'])) ){
+			$tab = array(
+				'name' => htmlspecialchars($_POST['nom']),
+				'firstName' => htmlspecialchars($_POST['prenom']),
+				'mail'=> htmlspecialchars($_POST['mail']),
+				'message' => htmlspecialchars($_POST['message'])
+				);
+				$recover = new Model_Connection();
+				$recoverMessage = $recover->recoverMessage($tab);
+				echo 'message envoyé';
+				require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/connection/contact.php');
+		}
+		else{
+			require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/connection/contact.php');
 
+		}
+	}
 	
 }
+?>

@@ -26,7 +26,13 @@ class Model_Basket {
 	
 
 	}
-			
+		public function getEstate($idu){
+		$req = ("SELECT * FROM achats WHERE idu=:idu");
+		$tableau =array(
+		'idu'=>$idu);
+		$resultat =$this->db->recup($req, $tableau);
+		return $resultat;	
 	}
+}
 
 ?>

@@ -16,7 +16,7 @@ foreach ($monProduit as $cle => $champs){
 						</div>
 						<div class="row">
 							<div class=" col xs-12 col-sm-8 col-md-12">
-								<h3 class="detail_description_title"><?php echo $champs['description']; ?></h3>
+								<h1 class="detail_description_title"><?php echo $champs['description']; ?></h1>
 								<p class="detail_description_total" ><?php echo $champs['descriptionb']; ?></p>
 							</div>
 						</div>

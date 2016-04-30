@@ -18,7 +18,6 @@ h1{
 	font-family:Georgia,serif,Times;
 	font-size: 20px;
 	font-weight:500;
-	margin-left:30px;
 	text-transform:uppercase;
 }
 h2{
@@ -64,7 +63,7 @@ textarea{
 
 p{
 font-family:Georgia,serif,Times;
-color:#B0E0E6;
+color:#84ddd7;
 }
 
 .shop{
@@ -91,7 +90,9 @@ transition: 2 ease-in-out;
 .shop_price-text{
 	margin-left:30%;
 }
-
+.contact_title{
+	margin-bottom:50px;
+}
 
 /*Jusqu’à 479px : smartphone en portrait
 De 480px à 959px : smartphone en paysage, tablette en portrait et petite tablette en paysage

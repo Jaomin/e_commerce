@@ -4,11 +4,12 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
 ?>
 <link rel="stylesheet" href="/fantasy/views/style/basket.css">
-<?php
+	<div class="col-md-9">
+<?php		
 if(!empty($_SESSION['panier'])){ 
 	?>
 
-		<div class="col-md-9">
+		
 			<form action="/fantasy/index.php" name="deleteBuy" method="get">
 				<table>
 					<tr>

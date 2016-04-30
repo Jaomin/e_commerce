@@ -1,4 +1,12 @@
+aside{
+
+	background-image:url("/fantasy/images/bulles.png");
+	background-size:contain;
+}
 .all{
+	
+	background-image:url("/fantasy/images/bulles.png");
+	background-size:contain;
 	margin-top:50px;
 }
 a:link{

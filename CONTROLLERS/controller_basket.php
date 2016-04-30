@@ -72,6 +72,17 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/models/model_basket.php');
 	}
 	require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/items/basket.php');	
 	}
+
+
+	public function showEstate(){
+		if (!empty($_SESSION['idu'])){
+		$idu = $_SESSION['idu'];
+		$estate= new Model_basket();
+		$userEstate = $estate -> getEstate($idu);
+		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/connection/compteUtilisateur.php');	
+		}
+		
+	}
 }
 
 ?>

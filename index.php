@@ -11,11 +11,10 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php');
 *NAVIGATION
 *permit to get the items by typeName to navigate un the website. the first function should permit a dynamic navigation.
 */
- /* $mytype = new controller_items();
+ /*$mytype = new controller_items();
   $mytype -> nav();*/
 
-
-if (empty($_GET)){
+if (empty($_GET) && empty($_POST)){
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/home.php'); 
 }
 if (!empty($_GET['page'])){
@@ -49,7 +48,26 @@ if (!empty($_POST['ident'])&& !empty($_POST['pass'])){
     $connect= new Controller_Connection();
     $connection = $connect->checkIdentExists();
 	}
+if (isset($_POST['deconnect'])){
+          session_destroy(); 
+    }  
 
+/**
+* permit to inscribe in the site to be able to navigate as admin or ident.
+*/
+if (isset($_GET['action'])){
+  if ($_GET['action']=='inscription'){  
+    $inscribe= new Controller_Connection();
+      $inscription = $inscribe->addUser();
+  }
+/**
+*permit to recover a message which is stocked in the bdd
+*/
+if ($_GET['action']=='CONTACT'){
+$message = new Controller_Connection();
+$message -> getMessage();
+  } 
+}    
 /**
 *BASKET
 *permit to get a basket page empty
@@ -57,10 +75,7 @@ if (!empty($_POST['ident'])&& !empty($_POST['pass'])){
 if (!isset($_SESSION['panier'])){
 $_SESSION['panier']= array();
 }
-/*if (isset($_SESSION['panier'])){
-  $total=new controller_basket();
-  $total-> total();
-}*/
+
 if (isset ($_GET['validate'])){
   $manageqty = New Controller_basket();
   $manageqty -> substractItem();
@@ -68,17 +83,17 @@ if (isset ($_GET['validate'])){
   $full->fullBasket();
 
 }
-
-
 /**
-* permit to inscribe in the site to be able to navigate as admin or ident.
+*permit to have a look on its past orders
 */
 if (isset($_GET['action'])){
-	if ($_GET['action']=='inscription'){  
-		$inscribe= new Controller_Connection();
-	    $inscription = $inscribe->addUser();
-	}
+ 
+  if ($_GET['action']=='Voir mes commandes'){ 
+    $orders= new Controller_basket();
+      $orders->showEstate();
+  }
 }
+
 
 /**
 *BASKET

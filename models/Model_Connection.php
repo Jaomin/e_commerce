@@ -17,8 +17,7 @@ class Model_Connection{
 			'pass'=>$tab['pass'], 
 			);
 		$resultat=$this->db->recup($req, $tableau);
-		return $resultat;	
-		
+		return $resultat;		
 }
 
 	public function getInscribe($tab){
@@ -48,6 +47,19 @@ class Model_Connection{
 			);
 		$resultat = $this->db->recup($req, $tab);
 		return $resultat;
+	}
+
+	public function recoverMessage($tab){
+		   $requeteAjout = "INSERT INTO messages (name, firstName, mail, message )
+        VALUES(:name,:firstName,:mail,:message);";
+        $table = array(
+                "name" => $tab['name'],
+                "firstName" => $tab['firstName'],
+                "mail"=> $tab['mail'],
+                "message" => $tab['message']
+                    );
+		$resultat= $this->db->recup($requeteAjout, $table);
+
 	}
 }
 ?>
