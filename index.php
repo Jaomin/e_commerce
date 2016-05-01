@@ -107,7 +107,7 @@ if (isset($_GET['quantity'])){
   $price=intVal($_GET['price']);
   $itemName=$_GET['name'];
   $buy=new controller_basket();
-  $buyitem=$buy-> createTrolley ($quantity, $id, $price,$itemName, $stock); 
+  $buyitem=$buy-> manageTrolley ($quantity, $id, $price,$itemName, $stock); 
 }
 	
 if (isset($_GET['deleteBuy'])){

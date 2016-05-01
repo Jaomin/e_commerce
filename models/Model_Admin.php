@@ -9,7 +9,9 @@ class Model_Admin{
 	public function __construct(){
 		$this->db=DB::getInstance();
 	}
-		
+/**
+* function which add the item in the database
+*/		
 	public function addItem($tab){
 
 		$requete = "INSERT INTO items (type, typeName, itemName, description, descriptionb,
@@ -30,7 +32,9 @@ class Model_Admin{
 		
 	}
 
-
+/**
+* function which modify the item in the database
+*/		
 	public function updateItem($tab, $itemName){
 		$req = "UPDATE items SET type = :type, typeName = :typeName, itemName=:itemName, description = :description, descriptionb = :descriptionb,
 		 price = :price , stock = :stock, picture = :picture WHERE itemName = :itemName";
@@ -49,7 +53,9 @@ class Model_Admin{
 		 $resultat = $this->db->recup($req, $tableau);
 		
 	}
-
+/**
+* function which delete the item in the database
+*/		
 	public function deleteItem($nom){
 		$req = "DELETE FROM items WHERE itemName = :nom";
 		$tableau =array(
@@ -58,13 +64,14 @@ class Model_Admin{
 		$resultat = $this->db->recup($req, $tableau);
 		 return $resultat;
 	}
-
+/**
+* function which substract the quantity in the database after validation of the trolley
+*/		
 	public function substract($id, $quantity){
 		$req = "UPDATE items SET stock= stock-$quantity WHERE id = $id; ";
 		$resultat = $this ->db->recup($req);
 
 		 return $resultat;
-
 	}
 	public function allTypeName(){
 		$req= ("SELECT * FROM categories ORDER BY name;");
@@ -72,7 +79,9 @@ class Model_Admin{
 		$resultat=$this->db->recup($req,$tableau);
 		return $resultat;
 	}
-
+/**
+* function which the entire description of the item before updating it 
+*/		
 	public function positionItem($nom){
 		$req = ("SELECT * FROM items WHERE itemName=:nom");
 		$tableau =array(
@@ -83,7 +92,9 @@ class Model_Admin{
 		
 	}
 
-	//function made for the administrator who wants to modify an Item. It represents the list of all of them
+/**
+*function made for the administrator who wants to modify an Item. It represents the list of all of them
+*/
 	public function findItem($nom){
 		$req = ("SELECT * FROM items WHERE nom=:nom;");
 		$tableau =array(

@@ -52,15 +52,6 @@ header{
 	height: 30px;
 }
 
-.header-basket{
-	background-image:url("/fantasy/images/bulles.png");
-	background-size:contain;
-}
-
-.header-img{
-	border-radius:30px;
-	
-	}
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -104,8 +95,8 @@ padding:0px 0px 0px 50px;
 		
 
 @media only screen and (max-width:480px) {
-		.header{
-		height:300px;
+		.header_img{
+			background-image:none;
 		}
 		.header-inscription{
 			margin-left:80px;

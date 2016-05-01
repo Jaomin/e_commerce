@@ -13,7 +13,7 @@ class Model_Basket {
 
 	}
 	public function delivery($idItem, $itemName, $price, $quantity, $idu){
-		$requete = "INSERT INTO achats (idItem, itemName, price, quantity, idu)
+		$requete = "INSERT INTO purchases (idItem, itemName, price, quantity, idu)
 		VALUES (:idItem, :itemName, :price, :quantity, :idu);";
 		$tableau = array(
 			"idItem" => $idItem,
@@ -27,7 +27,7 @@ class Model_Basket {
 
 	}
 		public function getEstate($idu){
-		$req = ("SELECT * FROM achats WHERE idu=:idu");
+		$req = ("SELECT * FROM purchases WHERE idu=:idu");
 		$tableau =array(
 		'idu'=>$idu);
 		$resultat =$this->db->recup($req, $tableau);

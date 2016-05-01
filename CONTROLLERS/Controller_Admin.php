@@ -4,7 +4,9 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/MODELS/Model_Items.php');
 
 class Controller_Admin{
 
-
+/**
+* the function prepare the array which will be use to add an item in the database.
+*/
 public function addItem(){
 		
 		if (!empty($_POST['type']) && !empty($_POST['categorie']) && !empty($_POST['nom']) && !empty($_POST['description']) 
@@ -33,7 +35,9 @@ public function addItem(){
 		}
 	
 
-
+/**
+* the function prepare the array which will be use to update an item in the database.
+*/
 	public function modifyItem(){
 
 		if (!empty($_POST['type']) && !empty($_POST['typeName']) && !empty($_POST['itemName']) && !empty($_POST['description'])
@@ -58,13 +62,20 @@ public function addItem(){
 	
 	}
 
-//DELETE
+/**
+*DELETE ITEM
+* this function recover the typeNames in database 
+*the user have to select one of them to follow.
+*/
 	public function listAllTypeNamesDel(){
 	$type = new Model_Admin();
 	$mytype = $type -> allTypeName();
 	require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/deleteItem.php');
 	
-
+/**
+* this function recover the items in database 
+*the user have to select one of them to follow.
+*/
 	}
 	public function showItemsDel($typeName){
 		$produits = new Model_items();
@@ -72,7 +83,9 @@ public function addItem(){
 		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/deleteItem.php');
 		
 	}
-	
+/**
+* this function allow to delete an item
+*/	
 	public function deleteItems(){
 		if(isset($_POST['choose']) && isset($_POST['delete'])){
     	$nom = $_POST['choose'];
@@ -83,13 +96,22 @@ public function addItem(){
 
 }
 
-//MODIFY
+
+/**
+*MODIFY ITEM
+* this function recover the typeNames in database 
+*the user have to select one of them to follow.
+*/
 		public function showItems($typeName){
 		$produits = new Model_items();
 		$chooseItem = $produits ->getItems($typeName);
 		require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/administration/modifyItem.php');
 		
 	}
+/**
+* this function recover the items in database 
+*the user have to select one of them to follow.
+*/
 	public function listAllTypeNames(){
 	$type = new Model_Admin();
 	$mytype = $type -> allTypeName();
@@ -97,7 +119,10 @@ public function addItem(){
 	
 
 	}
-	//return the placeholder to increase the visibility for the admin
+/**
+*return the placeholder to increase the visibility for the admin
+* allow to modify an or more elements of the item.
+*/
 	public function placeItem($nom){
 		$produit = new Model_Admin();
 		$modProduct = $produit ->positionItem($nom);

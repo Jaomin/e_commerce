@@ -4,12 +4,11 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/header.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/views/nav.php'); 
 ?>
 <link rel="stylesheet" href="/fantasy/views/style/basket.css">
-	<div class="col-md-9">
+	
 <?php		
 if(!empty($_SESSION['panier'])){ 
 	?>
-
-		
+		<div class=" col-md-offset-1 col-md-8">
 			<form action="/fantasy/index.php" name="deleteBuy" method="get">
 				<table>
 					<tr>
@@ -58,13 +57,13 @@ foreach($_SESSION['panier'] as $cle => $item){
 				</div>
 			</div>
 		</div>
-	</div>
+	
 		
 <?php
 }
 else{
 	?>
-		<div class=" hidden col-md-9">
+		<div class="hidden col-md-9">
 		</div>
 
 <?php

@@ -3,6 +3,11 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/fantasy/MODELS/Model_Connection.php');
 
 class Controller_Connection{
 
+/**
+* recover inscription posts.prepare the array which is going to besubmitted to the database after 2 checkings:
+*@param $verif->ident has to be unique 
+*pass and pass-test have to be same.
+*/
 	public function addUser(){
 
 		if(!empty($_POST)){
@@ -50,7 +55,11 @@ class Controller_Connection{
 			}
 	}
 
-
+/**
+*When the user wants to connect, @param $userok check the existence of the ident and if it is associated whith the pass.
+*if user is identified, this function choose which kind of session is required. if it's an admin session, the user is orientated 
+*to the back office of the website.
+*/
 	public function checkIdentExists(){
 
 		if(!empty($_POST['ident']) && (!empty($_POST['pass']) && isset($_POST['submit']))) {
@@ -80,6 +89,9 @@ class Controller_Connection{
 		
 		}
 	}
+/**
+*the function get message recover the messages in the database.
+*/
 	public function getMessage(){
 		if (!empty($_POST['nom']) && !empty($_POST['prenom'] && !empty($_POST['mail']) && !empty($_POST['message'])) ){
 			$tab = array(

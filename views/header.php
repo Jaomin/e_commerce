@@ -74,7 +74,7 @@ if(!empty($message)){
 				
 ?>
 				
-				<div  class="header-basket col-xs-3 col-sm-3 col-md-1">
+				<div  class="header-basket col-xs-12 col-sm-1 col-md-1">
 					<a class="header-img" href="/fantasy/index.php?module=basket"><img class="header-img" src="/fantasy/images/bag.png" width="80px"/></a>
 				</div>
 				
